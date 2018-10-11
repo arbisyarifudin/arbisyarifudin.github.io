@@ -1,7 +1,7 @@
 *{
 	margin: 0;
 	padding: 0;
-}
+	}	
 
 body{
 	margin: 0;
@@ -27,7 +27,7 @@ body{
 
 #tampilan h1{
 	font-size: 50px;
-	line-height: 1.2;
+	line-height: 1.0;
 
 }
 
@@ -50,38 +50,32 @@ body{
 	color: #fff;
 }
 
-#bagian-1{
-	padding:20px;
-	background: #ffab35;
-	color:#fff;
-	text-align: center;
-}
 
-#bagian-2{
+#bagian-1{
 	padding:20px;
 	background: #f4f4f4;
 	text-align: center;
 }
 
-#bagian-3{
+#bagian-2{
 	display: flex;
 }
 
-#bagian-3 h3{
+#bagian-2 h3{
 	font-size: 18px;
+}
+
+#bagian-2 div{
+	padding: 10px;
 	line-height: 1.2;
 }
 
-#bagian-3 div{
-	padding: 15px;
-}
-
-#bagian-3 #kotak1, #bagian-3 #kotak3{
+#bagian-2 #kotak1, #bagian-2 #kotak3{
 	background: #ffab35;
 	color: #fff;
 }
 
-#bagian-3 .kotak2 {
+#bagian-2 .kotak2 {
 	background: #f9f9f9;
 }
 
