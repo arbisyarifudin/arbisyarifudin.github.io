@@ -1,1 +1,1 @@
-Kumpulan mini games buatan sendiri dan/atau modif punya orang.
+Kumpulan game/app hasil latihan, baik buatan sendiri dan/atau modif punya orang.
