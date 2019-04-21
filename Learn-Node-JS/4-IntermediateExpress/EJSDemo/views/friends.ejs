@@ -1,0 +1,18 @@
+<% include partials/header %>
+
+<div id="container">
+    <h1>My Friend List:</h1>
+
+    <% temanVar.forEach(function(nama){ %>
+        <li> <%= nama %>  <span id="delete">x</span> </li>
+    <% }); %>
+
+    <form action="/addFriend" method="POST" id="form">
+        <input type="text" placeholder="write your friend name" name="newFriend">
+        <button>Add Friend</button>
+    </form>
+
+</div>
+
+
+<% include partials/footer %>
