@@ -1,1 +1,4 @@
-Kumpulan game/app hasil latihan, baik buatan sendiri dan/atau modif punya orang.
+# Hai,
+ini hanyalah app sederhana hasil latihan memanipulasi DOM dengan JQuery.
+
+Silakan dibuka : https://arbisyarifudin.github.io/app/Todo-List/index.html
