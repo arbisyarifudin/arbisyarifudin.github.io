@@ -1,126 +1,310 @@
+/*
+Theme Name: arbisyarifudin
+Theme URI: http://arbisyarifudin.com
+Version: 1.0
+Tags:
+Description: 
+Author: Arbi Syarifudin.
+Author URI: http://arbisyarifudin.com
+*/
+	
+
+
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800&display=swap');
+
+
+
+body {
+  display: none;
+}
+
+
+/* ----------------- */
+
 body, html {
-	font-family: 'Montserrat', sans-serif;
+	/* font-family: 'Montserrat', sans-serif; */
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	background: #000;
 	height: 100vh;
 	/* For 100% screen height */
-	width: 100vw;
+	/* width: 100vw; */
 	/* For 100% screen width */
 	color: #fff;
 	overflow: hidden;
+	overflow-x: hidden;
+	-webkit-appearance: none;
+	background: #000;
 }
 
-a {
+html {
+	scrollbar-width: none;
+	/* Firefox */
+	-ms-overflow-style: none;
+	/* IE 10+ */
+	-webkit-appearance: none;
+}
+
+html::-webkit-scrollbar {
+	/* WebKit */
+	width: 0;
+	height: 0;
+}
+
+
+html {
+	overflow-x: hidden;
+	-webkit-appearance: none;
+}
+
+/* a {
 	transition: all 0.2s linear;
 	-webkit-transition: all 0.2s linear;
 	-moz-transition: all 0.2s linear;
 	-o-transition: all 0.2s linear;
+} */
+
+a, img,
+.send,
+.messaged {
+	transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	text-decoration: none;
+}
+
+body::-webkit-scrollbar {
+	width: 0.3em;
+}
+
+body::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: #c8baad;
+	outline: 0px solid slategrey;
+}
+
+
+body::-moz-scrollbar {
+	width: 0.3em;
+}
+
+body::-moz-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-moz-scrollbar-thumb {
+	background-color: #c8baad;
+	outline: 0px solid slategrey;
+}
+
+::selection {
+	background: #c8baad;
+	color: #ffffff;
+}
+
+::-moz-selection {
+	background: #c8baad;
+	color: #ffffff;
 }
 
 /* header {
 	height: 5%;
 	box-sizing: border-box;
 }  */
-main {
+/* main {
 	height: 70%;
 	box-sizing: border-box;
-}
+} */
 /* footer {
 	height: 10%;
 	box-sizing: border-box;
 }   */
 
-.mail {
-	position: absolute;
-	right: 100px;
-	top: 15px;
-	font-size: 28px;
+/* CSS 2 */
+
+header {
+	display: block;
+	width: 100%;
+	padding: 30px 0 0 0;
+	max-width: 1400px;
+}
+/* 
+header {
+		padding-top: 20px;
+	    display: block;
+	    max-width: 1400px;
+} */
+
+header ul.menu-bar {
+	display: block;
+	float: right;
+	position: relative;
+	z-index: 3;
+}
+
+header .sticky ul {
+	display: block;
+	padding: 0;
+	margin-left: -15px;
+	position: relative;
+	z-index: 3;
+}
+
+header .sticky ul li a {
+	margin: 0;
+}
+
+header ul li {
+	display: block;
+	float: left;
+}
+
+header ul li a {
+	font-size: 15px;
+	color: #cccaca;
+	text-transform: uppercase;
+	font-weight: 500;
+	margin-right: 35px;
+}
+
+header ul li a:active,
+header ul li a:focus {
+	background: none;
+	color: #fff;
+}
+
+header ul li.active a {
+	background: none;
+	color: #fff;
+}
+
+header ul li a:hover {
+	color: #fff;
+	text-decoration: none;
+	letter-spacing: 0.15em;
+}
+
+main {
+	display: block;
+	min-height: 100%;
+}
+
+.logo {
+	display: block;
+	float: left;
+	font-size: 18px;
+	font-weight: 600;
+	text-transform: uppercase;
+	/* width: 40px;
+	height: 35px; */
+	/* background: url(img/m3.svg) no-repeat; */
+	position: relative;
+	z-index: 4;
+	color: #fff;
+}
+
+.logo:hover {
+	color: #bcbbbb;
+	text-decoration: none;
+}
+
+/* 
+.wrap {
+	display: block;
+	margin: 0 auto;
+	width: 80%;
+	max-width: 1400px;
+} */
+
+.menux {
+	display: none;
+	float: right;
+	width: 30px;
+	height: 30px;
+	background: url(../../img/icon/menu.svg) center center no-repeat;
+	background-size: 30px;
+	position: relative;
+	margin-top: -3px;
+	z-index: 4;
 	cursor: pointer;
 }
 
-.mail ul li {
-	list-style-type: none;
-}
-
-.mail ul li:hover,
-.mail ul li:focus,
-.mail ul li:active {
-	/* font-size: 25px; */
-	color:#e2e2e2;
-}
-
-#callback {
-	position: relative;
+.tutup {
+	display: none;
 	float: right;
-	top: -65px;
-	right: 80px;
-	z-index: 10;
+	width: 30px;
+	height: 30px;
+	background: url(../../img/icon/close.svg) center center no-repeat;
+	background-size: 21px;
+	position: relative;
+	margin-top: -3px;
+	z-index: 7;
+	/* color: #fff; */
+	cursor: pointer;
 }
 
-#myMenu {
-	padding-right: 50px;
+.msg {
+	display: block;
+	width: 30px;
+	height: 30px;
+	background: url(../../img/icon/msg.svg);
+	background-size: 30px;
+	margin: -4px 20px 0 10px;
+	float: right;
+	position: relative;
+	z-index: 4;
+	cursor: pointer;
 }
 
-#navbar {
-	padding-top: 10px;
-	background: #000;
-	border-radius: 0;
-	border: 0;
-	text-transform: uppercase;
-}
-
-#navbar .navbar-brand {
-	color: #fff;
-	font-weight: 700;
-}
-
-#navbar .navbar-brand:hover {
-	color: #dddddd;
-}
-
-#navbar li a {
-	color: #fff;
-	font-weight: 500;
-	letter-spacing: 0.1em;
-	transition: all 0.5s ease-in-out;
-}
-
-#navbar li a:hover {
-	color: #dddddd;
-	/* border-bottom: 2px solid #fff; */
-	/* box-shadow: inset 0 -3px 0 #dddddd; */
-	/* font-weight: 600; */
-	letter-spacing: 0.15em;
-	font-size: 10px;
-}
-
-/* .siapa {
+.sticky {
+	display: none;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.95);
 	position: absolute;
-	z-index: 15;
-} */
-
-.siapa h1 {
 	padding-top: 80px;
-	font-size: 82px;
-	line-height: 80px;
-	font-weight: 700;
+	margin-top: -60px;
+	z-index: 3;
 }
 
-.siapa p {
-	font-size: 18px;
-	color: #c0c0c0;
-	padding-top: 15px;
+.sticky ul {
+	float: left;
+	width: 100%;
 }
 
-div.foto img {
-	position: absolute;
-	width: 500px;
-	max-width: 600px;
-	/* height: auto; */
-	padding-top: 5%;
-	right: 100px;
-	top: 50%;
-	bottom: 0;
-	border-radius: 50%;
+.sticky li {
+	display: block;
+	float: none;
+}
+
+.sticky li a {
+	display: block;
+	font-size: 15px;
+	color: #bdbcbc;
+	padding: 15px 35px;
+	border-top: 1px rgba(255, 255, 255, 0.1) solid;
+	text-align: left;
+}
+
+.sticky .menu-utama {
+	display: block;
+}
+
+/*  */
+
+.siapa {
+	display: block;
+	width: 60%;
+	padding: 0;
+	float: left;
+	padding: 8% 0 0 0;
+	
 }
 
 .foto {
@@ -131,23 +315,67 @@ div.foto img {
 	background: url(../../img/foto.png) bottom center no-repeat;
 	background-size: auto 100%;
 	position: absolute;
+	right: 7%;
+	bottom: 0;
+	z-index: 2;
+}
+
+/* END CSS 2 */
+
+.siapa h1 {
+	display: block;
+	text-align: left;
+	font-size: 75px;
+	line-height: 80px;
+	font-weight: 700;
+}
+
+.siapa p {
+	font-size: 18px;
+	/* color: #c0c0c0; */
+	padding-top: 15px;
+	display: block;
+    color: #cccaca;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+/* .foto {
+	display: block;
+	float: right;
+	width: 50%;
+	height: 90%;
+	background: url(../../img/foto.png) bottom center no-repeat;
+	background-size: auto 100%;
+	position: absolute;
 	right: 5%;
 	top: 14%;
 	z-index: 1;
-}
+} */
 
 footer {
 	position: absolute;
-	bottom: 0;
+	bottom: -10px;
 	left: 0;
-	right: 0;
-	z-index: 80;
+	width: 100%;
+	z-index: 4;
 }
 
 footer .lat-blog {
 	/* float: left; */
 	margin-bottom: 35px;
 }
+/* 
+footer .lat-blog {
+	 display: block;
+	 positin: relative;
+	 padding: 0 0 0px 35px;
+	 width: 90%;
+	 height: 72px;
+	 max-width: 350px;
+	 margin: -25px 0 0 0;
+	 float: left;
+} */
 
 footer .lat-blog h4 {
 	color: #c0c0c0;
@@ -159,16 +387,16 @@ footer .lat-blog h5 a {
 	color: #fff;
 	text-decoration: none;
 	font-size: 16px;
-	/* transition: all 0.2s linear; */
+	/* transition: all 0.3s ease-in-out; */
 }
 
 footer .lat-blog h5 a:hover {
 	color: #c0c0c0;
-	border-left: 7px solid #0057ff;
+	border-left: 5px solid #0057ff;
 	padding-left: 10px;
 }
 
-#sosial {
+.sosial {
 	position: absolute;
 	/* float: right; */
 	right: 305px;
@@ -176,7 +404,7 @@ footer .lat-blog h5 a:hover {
 	bottom: 0;
 }
 
-#sosial a {
+.sosial a {
 	display: block;
 	color: #fff;
 	/* background: #0057ff; */
@@ -187,26 +415,26 @@ footer .lat-blog h5 a:hover {
 	/* transition: all 0.3s linear; */
 }
 
-#sosial a:hover {
+.sosial a:hover {
 	background: #0057ff;
 	color: #e2e2e2
 	/* font-size: 23px; */
 }
 
-#sosial ul li.sosmed a {
+.sosial ul li.sosmed a {
 	padding: 0;
 	margin: 0 -7px 0 0;
 }
 
-#sosial a.sorot {
+.sosial a.sorot {
 	background: #0f5fff;
 }
 
-#sosial a.sorot:hover {
+.sosial a.sorot:hover {
 	background: #0048d8;
 }
 
-#sosial ul .sosmed {
+.sosial ul .sosmed {
 	display: inline-block;
 }
 /* 
@@ -214,14 +442,14 @@ li sosmed {
 	margin: 0;
 } */
 
-#hire-me {
+.hire-me {
 	position: absolute;
 	right: 0;
 	bottom: 10px;
 }
 
 
-#hire-me button.hire-text {
+.hire-me button.hire-text {
 	/* position: absolute; */
 	height: 50px;
 	background: #fff;
@@ -238,103 +466,62 @@ li sosmed {
 	/* clear: both; */
 }
 
-#hire-me button.hire-text-2 {
+.hire-me button.hire-text-2 {
 	display: none;
 }
 
-#hire-me button:hover {
+.hire-me button:hover {
 	background: #c0c0c0;
 }
 
-#hire-me button:hover i.fas {
+.hire-me button:hover i.fas {
 	padding-left: 40px;
 }
 
-#hire-me .fas {
+.hire-me .fas {
 	padding-left: 20px;
 	transition: all 0.25s linear;
 }
 
+/* CSS for MOBILE v2 */
+@media only screen and (max-height: 520px) {
+
+	/* .siapa h1 {
+		font-size: 42px;
+		line-height: 42px;
+
+	} */
+}
+
+@media screen and (min-width: 576px) {
+	
+	
+}
+
+@media only screen and (max-width: 575px) {
+	.menux {
+		display: block;
+	}
+	.foto {
+		right: 0%;
+		background: url(../../img/foto.png) top left no-repeat;
+		background-size: 100%;
+		width: 65%;
+	}
+
+	.menu-utama {
+		display: none;
+	}
+}
+	
 
 /* CSS for MOBILE */
 
 @media only screen and (max-width: 1000px) {
 
-	.navbar {
-		padding: 0 20px;
-	}
-
-	.mail {
-		position: absolute;
-		right: 20%;
-		top: 15px;
-		font-size: 28px;
-	}
-
-	.mail ul li {
-		list-style-type: none;
-	}
-	.mail ul li a:hover,
-	.mail ul li a:focus,
-	.mail ul li a:active {
-		font-size: 25px;
-	}
-
-	#callback {
-		top: -71px;
-		right: 100px;
-	}
-
-	
-
-	#bars {
-		background: url("../../img/icon/menu.svg") center center no-repeat;
-		background-size: 30px;
-		width: 30px;
-		height: 30px;
-		position: relative;
-		z-index: 5;
-		/* background-color: #fff; */
-		display: block;
-	}
-/* 
-	#close {
-		background: url("../../img/icon/close.svg") center center no-repeat;
-		background-size: 22px;
-		width: 30px;
-		height: 30px;
-		position: relative;
-		z-index: 5;
-		display: none;
-	} */
-
-
-	.navbar-default .navbar-toggle {
-		border: none;
-	}
-
-	.navbar-toggle {
-		margin-top: 0;
-	}
-
-	.navbar-default .navbar-toggle:hover,
-	.navbar-default .navbar-toggle:focus {
-		background: none;
-	}
-
-	/* .navbar-default .navbar-header .icon-bar {
-		background: #fff;
-		width: 30px;
-		margin-top: 7px;
-	} */
-
-	/* .navbar-header span.fas.fa-bars {
-		font-size: 23px!important;
-	} */
-
 	.siapa h1 {
 		display: block;
-		width: 60%;
+		/* width: 60%; */
 		padding-left: 20px;
 		font-size: 45px;
 		line-height: 48px;
@@ -345,7 +532,7 @@ li sosmed {
 	.siapa p {
 		font-size: 15px;
 		display: block;
-		width: 60%;
+		/* width: 60%; */
 		padding-left: 20px;
 		line-height: 24px;
 		text-align: right;
@@ -355,14 +542,6 @@ li sosmed {
 		display: block;
 	}
 
-	/* div.foto img {
-		postition: absolute;
-		right: -280px;
-		top: -250px;
-		width: 900px;
-		z-index: 90;
-	} */
-
 	.foto {
 		top: 12%;
 		right: -55%;
@@ -370,6 +549,14 @@ li sosmed {
 		background-size: 100%;
 		width: 120%;
 	}
+
+	/* div.foto img {
+		postition: absolute;
+		right: -280px;
+		top: -250px;
+		width: 900px;
+		z-index: 90;
+	} */
 
 	footer {
 		position: absolute;
@@ -394,7 +581,7 @@ li sosmed {
 		font-size: 13px;
 	}
 
-	#sosial {
+	.sosial {
 		position: absolute;
 		/* float: left; */
 		left: -40px;
@@ -402,7 +589,7 @@ li sosmed {
 		bottom: -3px;
 	}
 
-	#sosial a {
+	.sosial a {
 		height: 50px;
 		display: inline-block;
 		margin: 0;
@@ -413,22 +600,22 @@ li sosmed {
 		background: rgba(0, 0, 0, 0.7);
 	}
 
-	#sosial ul li.sosmed a {
+	.sosial ul li.sosmed a {
 		padding: 0;
 		margin: 0 -7px 0 0;
 	}
 
-	#sosial a.sorot{
+	.sosial a.sorot{
 		background: #0057ff;
 	}
 
-	#hire-me {
+	.hire-me {
 		position: relative;
 		float: right;
 		margin: 0;
 	}
 
-	#hire-me button.hire-text-2 {
+	.hire-me button.hire-text-2 {
 		width: 200px;
 		height: 40px;
 		margin: 0 -15px 0 0;
@@ -437,36 +624,26 @@ li sosmed {
 	}
 	
 
-	#hire-me .fas {
+	.hire-me .fas {
 		padding-left: 10px;
 	}
 
-	#hire-me button:hover i.fas {
+	.hire-me button:hover i.fas {
 		padding-left: 20px;
 	}
 
 
 }
 
-@media only screen and (min-width: 769px) and (max-width: 876px) {
-
-	#callback {
-		top: -65px;
-		right: 50px;
-	}
-
-}
-
-
 /* CSS for button hire me */
 
 @media only screen and (min-width: 768px) and (max-width: 775px) {
 
-	#hire-me button.hire-text {
+	.hire-me button.hire-text {
 		display: none;
 	}
 
-	#hire-me button.hire-text-2 {
+	.hire-me button.hire-text-2 {
 		display: block;
 		margin: 0 -70px 0 0;
 	}
@@ -475,7 +652,7 @@ li sosmed {
 @media only screen and (min-width: 776px) and (max-width: 825px) {
 	
 
-	#hire-me button.hire-text {
+	.hire-me button.hire-text {
 		margin: 0 -30px 0 0;
 	}
 	
@@ -484,7 +661,7 @@ li sosmed {
 @media only screen and (min-width: 860px) and (max-width: 991px) {
 
 
-	#hire-me button.hire-text {
+	.hire-me button.hire-text {
 		margin: 0 -100px 0 0;
 	}
 }
@@ -494,17 +671,27 @@ li sosmed {
 
 @media only screen and (max-width: 768px) {
 
-	#myMenu {
-		z-index: 50;
+	body {
+		padding: 0 10px;
 	}
-	.foto {
-		z-index: 1;
+
+	header {
+		padding: 20px 0 5px 0;
 	}
-	#hire-me button.hire-text {
+
+	.popup {
+		width: 100%;
+	}
+
+	.siapa {
+		width: 60%;
+	}
+
+	.hire-me button.hire-text {
 		display: none;
 	}
 
-	#hire-me button.hire-text-2 {
+	.hire-me button.hire-text-2 {
 		display: block;
 		width: 200px;
 		height: 40px;
@@ -513,7 +700,7 @@ li sosmed {
 		font-size: 15px;
 	}
 
-	#hire-me button.hire-text-2 {
+	.hire-me button.hire-text-2 {
 		/* position: absolute; */
 		height: 50px;
 		background: #fff;
@@ -582,8 +769,9 @@ li sosmed {
 	font-weight: 200
 }
 
-.popup input[type=submit] {
-	margin-top: 30px;
+.popup button[type=submit] {
+	float: left;
+	margin: 0;
 }
 
 .close-popup {
@@ -606,12 +794,16 @@ li sosmed {
 	font-weight: 600;
 	padding: 12px 30px;
 	border-radius: 3px;
-	coursor: pointer;
+	cursor: pointer;
 	float: left;
 }
 
 .messaged:hover {
 	opacity: 0.8;
+}
+
+.atau {
+	float: left;
 }
 
 
@@ -620,13 +812,14 @@ li sosmed {
 	width: 30px;
 	height: 30px;
 	float: right;
-	margin: 70px 0 0 20px;
+	margin: 5px 0 0 10px;
 	color: #d8d8d8;
 	font-size: 13px;
+	/* margin-right: 20px; */
 }
 
 .sender:hover {
-	opacity: 0.9;
+	opacity: 0.6;
 }
 
 #telegram {
@@ -675,6 +868,7 @@ li sosmed {
 	position: relative;
 	margin-top: -90px;
 	color: #bcbbbb;
+	font-size: 13px;
 }
 
  @media (max-width: 768px) {
@@ -695,7 +889,7 @@ li sosmed {
  	.popup p {
 		display: block;
  		font-size: 13px;
-		 line-height: 18px;
+		line-height: 18px;
  	}
 
  	.popup input[type="text"],
@@ -709,6 +903,9 @@ li sosmed {
  		padding: 10px 25px;
 	 }
 	 
+	 .stj {
+		 font-size: 10px;
+	 }
 	 
 
 
