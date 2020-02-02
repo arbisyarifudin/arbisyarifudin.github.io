@@ -1,0 +1,1124 @@
+/*
+Theme Name: mkdes
+Theme URI: http://mkdes.ru/
+Version: 1.0
+Tags:
+Description: 
+Author: Michael Koshelev.
+Author URI: http://mkdes.ru
+*/
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800&display=swap');
+
+
+
+body {
+  display; none;
+}
+
+
+/* ----------------- */
+
+
+.naver {
+  display: block;
+  padding: 0 0 35px 0;
+  margin-bottom: 30px;
+}
+
+.naver li {
+    display: block;
+    transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    float: left;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #323232;
+    padding: 12px 25px;
+    font-weight: 500;
+    border-radius: 35px;
+    border: 1px #fafafa solid;
+}
+
+.naver li a {
+    color: #323232;
+}
+
+
+
+.naver li:hover {
+  border: 1px rgba(0,0,0,0.1) solid;
+}
+
+.naver li.active {
+  border: 1px rgba(0,0,0,0.1) solid;
+}
+
+
+.col2 {
+	display: block;
+	width: 50%;
+	float: left;
+}
+
+
+
+.col3 {
+	display: block;
+	width: 33.3%;
+	float: left;
+}
+
+
+.col3, .col2, .content {
+opacity:0; /*Элемент полностью прозрачный (невидимый)*/
+transition: 0.5s; /*Скорость перехода состояния элемента*/
+animation: show 0.5s 1; /* Указываем название анимации, её время и количество повторов*/
+animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+animation-delay: 0.5s; /* Задержка перед началом */
+}
+
+
+@keyframes show{
+0%{
+opacity:0;
+}
+100% {
+opacity:1;
+}
+}
+
+
+
+.concept {
+display: block;
+position: absolute;
+right: 20px;
+font-size: 10px;
+color: #fff;
+background: #1c1c1c;
+padding: 4px 12px;
+border-radius: 3px;
+top: 30px;
+z-index: 30;
+box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+}
+
+
+.play {
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #fff url(img/play.svg) center center no-repeat;
+    background-size: 20px;
+    border-radius: 50%;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+    z-index: 30;
+    left: 20%;
+    margin: 22%;
+}
+
+
+
+.livid {
+    background: url(img/play.svg) 12px center no-repeat;
+    background-size: 10px;
+    padding-left: 35px !important;
+}
+
+
+.work {
+	display: block;
+        position: relative;
+	width: 90%;
+	border-radius: 3px;
+	margin: 0 0 50px 0;
+}
+
+.work img {
+	width: 100%;
+	height: auto;
+	margin-bottom: 15px;
+	border-radius: 4px 4px 0 0;
+}
+
+.work h3 {
+	display: block;
+	font-size: 20px;
+	font-weight: 600;
+	color: #000;
+}
+
+.work p {
+	display: block;
+	height: 40px;
+	font-size: 14px;
+	line-height: 24px;
+	color: #3e3e3d;
+}
+
+.work:hover img {
+	opacity: 0.8;
+}
+
+
+
+
+.tohome {
+    display: block;
+    background: #fff url(img/back.svg) center left no-repeat;
+    background-size: 18px;
+    padding: 12px 25px 12px 40px;
+    color: #474747;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 35px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    background-position: 10px;
+    z-index: 2;
+    left: 5%;
+}
+
+.tohome:hover {
+    opacity: 0.95;
+}
+
+
+.worker img {
+	display:block;
+	width: 100%;
+	height: auto;
+}
+
+.worker {
+  padding-top: 35px;
+}
+
+.wrap2 {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1300px;
+}
+
+
+
+
+
+/* --------------- */
+
+
+
+
+
+
+
+body, section, input, h1, h2, h3, h4, h5, ul, ul li, .sticky {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	border: none;
+	font-weight: normal;
+        -webkit-appearance: none;
+}
+
+
+html {
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none;  /* IE 10+ */
+        -webkit-appearance: none;
+}
+
+html::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+
+
+body {
+	overflow-x: hidden;
+	-webkit-appearance: none;
+	font-family: Montserrat;
+	background: #000;
+}
+
+
+
+
+
+html {
+	overflow-x: hidden;
+        -webkit-appearance: none;
+}
+
+
+a, .work, .col3, img, .send, .messaged {
+	transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+	text-decoration: none;
+}
+
+
+body::-webkit-scrollbar {
+    width: 0.3em;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #c8baad;
+    outline: 0px solid slategrey;
+}
+
+
+body::-moz-scrollbar {
+    width: 0.3em;
+}
+
+body::-moz-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+body::-moz-scrollbar-thumb {
+    background-color: #c8baad;
+    outline: 0px solid slategrey;
+}
+
+::selection {
+    background: #c8baad;
+    color: #ffffff;
+}
+::-moz-selection {
+    background: #c8baad;
+    color: #ffffff;
+}
+
+
+body {
+  background: #000;
+  font-family: Montserrat;
+  overflow-x: hidden;
+}
+
+
+.wrap {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1400px;
+}
+
+
+.clear {
+  clear: both;
+}
+
+.casher {
+  display: none;
+}
+
+.menux {
+  display: none;
+  float: right;
+  width: 30px;
+  height: 30px;
+  background: url(img/menu.svg) center center no-repeat;
+  background-size: 30px;
+  position: relative;
+  z-index: 4;
+}
+
+.close {
+  display: none;
+  float: right;
+  width: 30px;
+  height: 30px;
+  background: url(img/close.svg) center center no-repeat;
+  background-size: 21px;
+  position: relative;
+  z-index: 4;
+}
+
+.msg {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url(img/msg.svg);
+    background-size: 30px;
+    margin: -4px 10px 0 10px;
+    float: right;
+    position: relative;
+    z-index: 4;
+    cursor: pointer;
+}
+
+.sticky {
+    display: none;
+    width: 100%;
+    background: rgba(0,0,0,0.9);
+    position: absolute;
+    padding-top: 80px;
+    margin-top: -60px;
+    z-index: 3;
+}
+
+.sticky li {
+  display: block;
+  float: none;
+}
+
+.sticky li a {
+  display: block;
+  font-size: 15px;
+  color: #bdbcbc;
+  padding: 15px 35px;
+  border-top: 1px rgba(255,255,255,0.1) solid;
+}
+
+.sticky .bottom-menu {
+ display: block;
+}
+
+
+header {
+  display: block;
+  width: 100%;
+  padding: 30px 0 0 0;
+}
+
+.logo {
+    display: block;
+    float: left;
+    font-size: 0;
+    width: 40px;
+    height: 35px;
+    background: url(img/m3.svg) no-repeat;
+    position: relative;
+    z-index: 4;
+}
+
+
+header ul {
+  display: block;
+  float: right;
+  position: relative;
+  z-index: 3;
+}
+
+header ul li {
+  display: block;
+  float: left;
+}
+
+header ul li a {
+  font-size: 15px;
+  color: #cccaca;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-right: 35px;
+}
+
+header ul li a:hover {
+  color: #fff;
+}
+
+header ul li.active a {
+  backgroound: none;
+  color: #fff;
+}
+
+
+.content {
+  display: block;
+  min-height: 100%;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 72px;
+  z-index: 4;
+}
+
+.send {
+  display: block;
+  width: 220px;
+  background: #fff url(img/arrow.svg) center right no-repeat;
+  background-size: 25px;
+  background-position: 90%;
+  padding: 24px 35px 22px 35px;
+  color: #020202;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  float: right;
+}
+
+.send:hover {
+  background: #cac8ca url(img/arrow.svg) center right no-repeat;
+  background-size: 25px;
+  background-position: 92%;
+}
+
+
+
+.drible {
+  display: block;
+  float: right;
+  width: 82px;
+  height: 72px;
+  background: url(img/drible.svg) center center no-repeat;
+  background-size: 30px;
+  background-position: center 25px;
+}
+
+.behance {
+  display: block;
+  float: right;
+  width: 82px;
+  height: 72px;
+  background: #0057ff url(img/behance.svg) center center no-repeat;
+  background-size: 30px;
+}
+
+.vk {
+  display: block;
+  float: right;
+  width: 82px;
+  height: 72px;
+  background: url(img/vk2.svg) center center no-repeat;
+  background-size: 30px;
+}
+
+.inblog {
+  display: block;
+  positin: relative;
+  padding: 0 0 0px 35px;
+  width: 90%;
+  height: 72px;
+  max-width: 350px;
+  margin: -25px 0 0 0;
+  float: left;
+}
+
+.inblog span {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #706f6f;
+  margin-bottom: 8px;
+}
+
+.inblog a h2 {
+  display: block;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+
+.conter {
+  display: block;
+}
+
+.incont {
+  display: block;
+  width: 60%;
+  padding: 8% 0 0 0;
+  float: left;
+}
+
+.incont h1 {
+    display: block;
+    text-align: left;
+    font-size: 122px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 120px;
+}
+
+
+.incont p {
+  display: block;
+  color: #cccaca;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+
+.workbut {
+  display: block;
+  text-align: center;
+  max-width: 150px;
+  border-radius: 3px;
+  border: 1px rgba(255,255,255,0.3) solid;
+  padding: 12px 20px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 30px 0;
+}
+
+
+.workbut:hover {
+ border: 1px #fff solid;
+}
+
+
+.content-in {
+ display: block;
+}
+
+.iams {
+  display: block;
+  float: right;
+  width: 50%;
+  height: 90%;
+  background: url(img/i.png) bottom center no-repeat;
+  background-size: auto 100%;
+  position: absolute;
+  right: 7%;
+  bottom: 0;
+  z-index: 2;
+}
+
+
+.oculus {
+  background: none;
+  background: url(img/i2.png) bottom center no-repeat;
+  background-size: auto 100%;
+}
+
+.oculus2 {
+  background: none;
+  background: url(img/i3.png) bottom center no-repeat;
+  background-size: auto 100%;
+}
+
+.oculus3 {
+  background: none;
+  background: url(img/i4.png) bottom center no-repeat;
+  background-size: auto 100%;
+}
+
+.oculus4 {
+  background: none;
+  background: url(img/i5.png) bottom center no-repeat;
+  background-size: auto 100%;
+}
+
+
+
+/* ---- Pinks ------ */
+.pinks {
+  background: #b43e72;
+}
+
+.pinks header {
+  background: #b43e72;
+}
+
+
+
+
+
+/* ----------- Blog ------------- */
+
+.blog {
+display: block;
+}
+
+.blog h1 {
+display: block;
+color: #fff;
+font-size: 48px;
+font-weight: 600;
+margin: 20px 0 30px 0;
+}
+
+.post {
+display: block;
+padding: 20px 0;
+width: 100%;
+max-width: 700px;
+}
+
+.post a h2 {
+  dislay: block;
+  font-size: 32px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.post p {
+  display: block;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #b0afb0;
+}
+
+.post p a{
+color: #fff;
+font-weight: 500;
+}
+
+
+.post span {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #706f6f;
+    margin-bottom: 8px;
+}
+
+
+.post ol li {
+  display: block;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #b0afb0;
+  margin: 20px 0 10px -20px;
+}
+
+.shares {
+  display: block;
+  margin: 20px 0 30px 0;
+  -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: 1s;
+}
+
+.shares:hover {
+  -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+
+/* ----- Work page ----- */
+
+.workpost img {
+ display: block;
+ width: 100%;
+ margin: 0 auto;
+ background: #fff;
+}
+
+
+.workpost {
+ display: block;
+ margin: 0;
+ padding: 0;
+ position: relative;
+ top: -10vh;
+}
+
+
+/* ----- Popup ----- */
+
+
+.popup {
+    display: block;
+    transition: all 0.6s;
+    -ms-transition: all 0.6s;
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    position: fixed;
+    top: 0;
+    width: 60%;
+    background: rgba(0,0,0);
+    height: 100vh;
+    right: -1000%;
+    z-index: 5;
+    padding: 10vh 0 0 0;
+}
+
+.popup h2 {
+	display: block;
+	font-size: 42px;
+	color: #fff;
+	font-weight: 600;
+}
+
+.popup p {
+	display: block;
+	font-size: 16px;
+	line-height: 24px;
+	color: #bcbbbb;
+}
+
+.popup input[type="text"] {
+    display: block;
+    background: none;
+    border: none;
+    color: #fff;
+    width: 100%;
+    padding: 20px 0 20px 0;
+    font-size: 17px;
+    border-bottom: 1px #3b3a3a solid;
+    margin: 20px 0;
+    outline: none;
+    font-weight: 200
+}
+
+.popup input[type=submit]{
+	margin-top: 30px;
+	}
+
+.close-popup {
+	display: block;
+	position: absolute;
+	top: 30px;
+	right: 5%;
+	width: 30px;
+	height: 30px;
+	background: url(img/close.svg) center center no-repeat;
+	background-size: 30px;
+	cursor: pointer;
+}
+
+
+.messaged {
+    background: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 3px;
+    coursor: pointer;
+    float: left;
+}
+
+.messaged:hover {
+   opacity: 0.8;
+}
+
+
+.sender {
+    display: block;
+    width: 30px;
+    height: 30px;
+    float: right;
+    margin: 42px 0 0 20px;
+    color: #d8d8d8;
+    font-size: 13px;
+}
+
+.sender:hover {
+  opacity: 0.9;
+}
+
+#telegram {
+  background: url(img/telegram.svg) top center no-repeat;
+  background-size: 25px;
+}
+
+#whatsapp {
+  background: url(img/whatsapp.svg) top center no-repeat;
+  background-size: 25px;
+}
+
+#vkontakte {
+  background: url(img/vk2.svg) top center no-repeat;
+  background-size: 25px;
+}
+
+
+/* ------------------ */
+
+
+
+
+@media (max-width: 1400px) {
+
+
+.incont h1 {
+    display: block;
+    text-align: left;
+    font-size: 82px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 80px;
+}
+}
+
+
+
+@media (max-height: 520px) {
+
+.incont h1 {
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+
+}
+
+@media (max-width:860px) {
+
+.inblog {
+    max-width: 100%;
+    float: none;
+    margin-top: 50px;
+}
+
+header {
+    padding: 15px 0 5px 0;
+}
+
+.popup {
+ width: 100%;
+}
+
+
+.pinks {
+  background: #000;
+}
+
+.pinks header {
+  background: #000;
+}
+
+
+
+}
+
+ @media (max-width: 750px) {
+
+.col3 {
+width: 50%;
+}
+
+.popup h2 {
+    font-size: 28px;
+}
+
+
+.popup p {
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.popup input[type="text"] {
+    padding: 10px 0 10px 0;
+    font-size: 15px;
+}
+
+.messaged {
+    font-size: 14px;
+    padding: 10px 25px;
+}
+
+
+}
+
+
+
+
+
+@media (max-width:660px) {
+
+.bottom-menu li a {
+    font-size: 13px;
+    margin-right: 0;
+    margin-left: 15px;
+  }
+
+  .iams {
+    right: -12%;
+  }
+
+.incont h1 {
+    font-size: 52px;
+    line-height: 52px;
+}
+
+
+
+.incont p {
+    font-size: 14px;
+  }
+
+
+.sender {
+    display: block;
+    width: 27px;
+    height: 27px;
+    margin: 39px 0 0 12px;
+    font-size: 0px;
+}
+
+#telegram, #whatsapp, #vkontakte {
+  background-size: 25px;
+}
+
+#orand {
+  display: none;
+}
+
+}
+
+
+
+@media (max-width:575px) {
+
+.iams {
+    right: 0%;
+    background: url(img/i-min.png) top left no-repeat;
+    background-size: 100%;
+    width: 65%;
+}
+
+.bottom-menu {
+  display: none;
+}
+
+.menux {
+  display: block;
+}
+
+.mob-menu {
+    width: 100%;
+    display: block;
+    float: none;
+}
+
+
+.msg {
+    background-size: 30px;
+    margin: 0px 30px 0 10px;
+}
+
+
+#bottom-nav {
+ float: none;
+}
+
+
+.vk, .behance, .drible {
+  width: 45px;
+  background-size: 20px;
+  height: 52px;
+  float: left;
+}
+
+
+
+.drible {
+    margin-left: 3%;
+    background-position: 50% 18px;
+}
+
+.send {
+    display: block;
+    width: 120px;
+    background: #fff url(img/arrow.svg) center right no-repeat;
+        background-position-x: right;
+        background-position-y: center;
+        background-size: auto;
+    background-size: 25px;
+    background-position: 90%;
+    padding: 17px 45px 17px 25px;
+    color: #020202;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    float: right;
+}
+
+.inblog {
+    margin-top: -70px;
+    padding-bottom: 20px;
+}
+
+.inblog a h2 {
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.workbut {
+    font-size: 14px;
+  }
+
+.incont h1 {
+    font-size: 45px;
+    line-height: 45px;
+}
+
+.workbut {
+    position: relative;
+    z-index: 2;
+}
+
+
+.incont h1 {
+ padding-top: 25%;
+}
+
+
+}
+
+
+@media (max-width: 500px) {
+
+.col3, .col2 {
+width: 100%;
+float: none;
+}
+
+.work {
+width: 100%;
+}
+
+
+.naver li {
+ font-size: 12px;
+ padding: 8px 8px;
+ margin-right: 0;
+}
+
+.blog h1 {
+    font-size: 36px;
+}
+
+.post a h2 {
+    font-size: 24px;
+}
+
+.workpost {
+    top: -14vh;
+}
+
+
+}
+
+
+
+
+
+
+
+
+/*    */

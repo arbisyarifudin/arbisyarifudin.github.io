@@ -1,15 +1,18 @@
-$(document).ready(function(){
+// $(document).ready(function () {
+//     // $('#nav li').click(function () {
+//     //     $('li').removeClass("active");
+//     //     $(this).addClass("active");
+//     // });
+//     $('.menu-utama li > a').each(function () {
+//         if (urlRegExp.test($(this).attr('href'))) {
+//             $(this).addClass('active');
+//         }
+//     });
+// });
 
-     $('#slider-hero').owlCarousel({
-         loop: true,
-         autoWidth: false,
-         nav: true,
-         items:1,
-         navText: [
-             '<i class="fa fa-angle-left" aria-hidden="true"></i>',
-             '<i class="fa fa-angle-right" aria-hidden="true"></i>'
-         ],
-         navContainer: '#hero-area',
-     });
-
-});
+// $(function () {
+//     $("li").click(function () {
+//         $("li").removeClass("active");
+//         $(this).addClass("active");
+//     });
+// });

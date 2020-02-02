@@ -1,46 +1,715 @@
-#slider-hero {
-    position: relative;
+body, html {
+	font-family: 'Montserrat', sans-serif;
+	background: #000;
+	height: 100vh;
+	/* For 100% screen height */
+	width: 100vw;
+	/* For 100% screen width */
+	color: #fff;
+	overflow: hidden;
 }
 
-#hero-area .slider-img {
-    width: 100%;
-    height: 768px;
-    vertical-align: bottom;
-    text-align: center;
+a {
+	transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
 }
 
-#hero-area .slider-img img {
-     object-fit: cover;
-     vertical-align: bottom;
-     text-align: center;
+/* header {
+	height: 5%;
+	box-sizing: border-box;
+}  */
+main {
+	height: 70%;
+	box-sizing: border-box;
+}
+/* footer {
+	height: 10%;
+	box-sizing: border-box;
+}   */
+
+.mail {
+	position: absolute;
+	right: 100px;
+	top: 15px;
+	font-size: 28px;
+	cursor: pointer;
 }
 
-/* Owl Tools */
-#hero-area .owl-prev {
-    width: 15px;
-    height: 100px;
-    position: absolute;
-    top: 40%;
-    /* margin-left: -20px; */
-    left: 50px;
-    display: block !important;
-    border: 0px solid black;
-    z-index: 100;
+.mail ul li {
+	list-style-type: none;
 }
 
-#hero-area .owl-next {
-    width: 15px;
-    height: 100px;
-    position: absolute;
-    top: 50%;
-    right: 50px;
-    display: block !important;
-    border: 0px solid black;
-    z-index: 100;
+.mail ul li:hover,
+.mail ul li:focus,
+.mail ul li:active {
+	/* font-size: 25px; */
+	color:#e2e2e2;
 }
 
-#hero-area .owl-prev i,
-#hero-area .owl-next i {
-    transform: scale(1, 6);
-    color: #ccc;
+#callback {
+	position: relative;
+	float: right;
+	top: -65px;
+	right: 80px;
+	z-index: 10;
 }
+
+#myMenu {
+	padding-right: 50px;
+}
+
+#navbar {
+	padding-top: 10px;
+	background: #000;
+	border-radius: 0;
+	border: 0;
+	text-transform: uppercase;
+}
+
+#navbar .navbar-brand {
+	color: #fff;
+	font-weight: 700;
+}
+
+#navbar .navbar-brand:hover {
+	color: #dddddd;
+}
+
+#navbar li a {
+	color: #fff;
+	font-weight: 500;
+	letter-spacing: 0.1em;
+	transition: all 0.5s ease-in-out;
+}
+
+#navbar li a:hover {
+	color: #dddddd;
+	/* border-bottom: 2px solid #fff; */
+	/* box-shadow: inset 0 -3px 0 #dddddd; */
+	/* font-weight: 600; */
+	letter-spacing: 0.15em;
+	font-size: 10px;
+}
+
+/* .siapa {
+	position: absolute;
+	z-index: 15;
+} */
+
+.siapa h1 {
+	padding-top: 80px;
+	font-size: 82px;
+	line-height: 80px;
+	font-weight: 700;
+}
+
+.siapa p {
+	font-size: 18px;
+	color: #c0c0c0;
+	padding-top: 15px;
+}
+
+div.foto img {
+	position: absolute;
+	width: 500px;
+	max-width: 600px;
+	/* height: auto; */
+	padding-top: 5%;
+	right: 100px;
+	top: 50%;
+	bottom: 0;
+	border-radius: 50%;
+}
+
+.foto {
+	display: block;
+	float: right;
+	width: 50%;
+	height: 90%;
+	background: url(../../img/foto.png) bottom center no-repeat;
+	background-size: auto 100%;
+	position: absolute;
+	right: 5%;
+	top: 14%;
+	z-index: 1;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 80;
+}
+
+footer .lat-blog {
+	/* float: left; */
+	margin-bottom: 35px;
+}
+
+footer .lat-blog h4 {
+	color: #c0c0c0;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+footer .lat-blog h5 a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 16px;
+	/* transition: all 0.2s linear; */
+}
+
+footer .lat-blog h5 a:hover {
+	color: #c0c0c0;
+	border-left: 7px solid #0057ff;
+	padding-left: 10px;
+}
+
+#sosial {
+	position: absolute;
+	/* float: right; */
+	right: 305px;
+	font-size: 25px;
+	bottom: 0;
+}
+
+#sosial a {
+	display: block;
+	color: #fff;
+	/* background: #0057ff; */
+	width: 80px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	/* transition: all 0.3s linear; */
+}
+
+#sosial a:hover {
+	background: #0057ff;
+	color: #e2e2e2
+	/* font-size: 23px; */
+}
+
+#sosial ul li.sosmed a {
+	padding: 0;
+	margin: 0 -7px 0 0;
+}
+
+#sosial a.sorot {
+	background: #0f5fff;
+}
+
+#sosial a.sorot:hover {
+	background: #0048d8;
+}
+
+#sosial ul .sosmed {
+	display: inline-block;
+}
+/* 
+li sosmed {
+	margin: 0;
+} */
+
+#hire-me {
+	position: absolute;
+	right: 0;
+	bottom: 10px;
+}
+
+
+#hire-me button.hire-text {
+	/* position: absolute; */
+	height: 50px;
+	background: #fff;
+	display: block;
+	width: 300px;
+	padding: 10px;
+	color: #000;
+	font-size: 20px;
+	font-weight: 600;
+	text-transform: uppercase;
+	border: none;
+	/* transition: all 0.3s linear; */
+	float: right;
+	/* clear: both; */
+}
+
+#hire-me button.hire-text-2 {
+	display: none;
+}
+
+#hire-me button:hover {
+	background: #c0c0c0;
+}
+
+#hire-me button:hover i.fas {
+	padding-left: 40px;
+}
+
+#hire-me .fas {
+	padding-left: 20px;
+	transition: all 0.25s linear;
+}
+
+
+/* CSS for MOBILE */
+
+@media only screen and (max-width: 1000px) {
+
+	.navbar {
+		padding: 0 20px;
+	}
+
+	.mail {
+		position: absolute;
+		right: 20%;
+		top: 15px;
+		font-size: 28px;
+	}
+
+	.mail ul li {
+		list-style-type: none;
+	}
+	.mail ul li a:hover,
+	.mail ul li a:focus,
+	.mail ul li a:active {
+		font-size: 25px;
+	}
+
+	#callback {
+		top: -71px;
+		right: 100px;
+	}
+
+	
+
+	#bars {
+		background: url("../../img/icon/menu.svg") center center no-repeat;
+		background-size: 30px;
+		width: 30px;
+		height: 30px;
+		position: relative;
+		z-index: 5;
+		/* background-color: #fff; */
+		display: block;
+	}
+/* 
+	#close {
+		background: url("../../img/icon/close.svg") center center no-repeat;
+		background-size: 22px;
+		width: 30px;
+		height: 30px;
+		position: relative;
+		z-index: 5;
+		display: none;
+	} */
+
+
+	.navbar-default .navbar-toggle {
+		border: none;
+	}
+
+	.navbar-toggle {
+		margin-top: 0;
+	}
+
+	.navbar-default .navbar-toggle:hover,
+	.navbar-default .navbar-toggle:focus {
+		background: none;
+	}
+
+	/* .navbar-default .navbar-header .icon-bar {
+		background: #fff;
+		width: 30px;
+		margin-top: 7px;
+	} */
+
+	/* .navbar-header span.fas.fa-bars {
+		font-size: 23px!important;
+	} */
+
+	.siapa h1 {
+		display: block;
+		width: 60%;
+		padding-left: 20px;
+		font-size: 45px;
+		line-height: 48px;
+		margin-bottom: 0;
+		text-align: right;
+	}
+
+	.siapa p {
+		font-size: 15px;
+		display: block;
+		width: 60%;
+		padding-left: 20px;
+		line-height: 24px;
+		text-align: right;
+		/* letter-spacing: 0.2px; */
+	}
+	.siapa p span {
+		display: block;
+	}
+
+	/* div.foto img {
+		postition: absolute;
+		right: -280px;
+		top: -250px;
+		width: 900px;
+		z-index: 90;
+	} */
+
+	.foto {
+		top: 12%;
+		right: -55%;
+		background: url(../../img/foto.png) top left no-repeat;
+		background-size: 100%;
+		width: 120%;
+	}
+
+	footer {
+		position: absolute;
+		margin: 0;
+		padding: 0;
+		bottom: -10px;
+
+	}
+
+	footer .lat-blog {
+		position: absolute;
+		font-size: 10px;
+		display: left;
+		bottom: 50px;
+	}
+
+	footer .lat-blog h4 {
+		font-size: 13px;
+	}
+
+	footer .lat-blog h5 a {
+		font-size: 13px;
+	}
+
+	#sosial {
+		position: absolute;
+		/* float: left; */
+		left: -40px;
+		width: 100%;
+		bottom: -3px;
+	}
+
+	#sosial a {
+		height: 50px;
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		font-size: 20px;
+		line-height: 40px;
+		width: 60px;
+		background: rgba(0, 0, 0, 0.7);
+	}
+
+	#sosial ul li.sosmed a {
+		padding: 0;
+		margin: 0 -7px 0 0;
+	}
+
+	#sosial a.sorot{
+		background: #0057ff;
+	}
+
+	#hire-me {
+		position: relative;
+		float: right;
+		margin: 0;
+	}
+
+	#hire-me button.hire-text-2 {
+		width: 200px;
+		height: 40px;
+		margin: 0 -15px 0 0;
+		padding: 0;
+		font-size: 15px;
+	}
+	
+
+	#hire-me .fas {
+		padding-left: 10px;
+	}
+
+	#hire-me button:hover i.fas {
+		padding-left: 20px;
+	}
+
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 876px) {
+
+	#callback {
+		top: -65px;
+		right: 50px;
+	}
+
+}
+
+
+/* CSS for button hire me */
+
+@media only screen and (min-width: 768px) and (max-width: 775px) {
+
+	#hire-me button.hire-text {
+		display: none;
+	}
+
+	#hire-me button.hire-text-2 {
+		display: block;
+		margin: 0 -70px 0 0;
+	}
+}
+
+@media only screen and (min-width: 776px) and (max-width: 825px) {
+	
+
+	#hire-me button.hire-text {
+		margin: 0 -30px 0 0;
+	}
+	
+}
+
+@media only screen and (min-width: 860px) and (max-width: 991px) {
+
+
+	#hire-me button.hire-text {
+		margin: 0 -100px 0 0;
+	}
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+
+	#myMenu {
+		z-index: 50;
+	}
+	.foto {
+		z-index: 1;
+	}
+	#hire-me button.hire-text {
+		display: none;
+	}
+
+	#hire-me button.hire-text-2 {
+		display: block;
+		width: 200px;
+		height: 40px;
+		margin: 0 -15px 0 0;
+		padding: 0;
+		font-size: 15px;
+	}
+
+	#hire-me button.hire-text-2 {
+		/* position: absolute; */
+		height: 50px;
+		background: #fff;
+		display: block;
+		width: 200px;
+		padding: 10px;
+		color: #000;
+		font-size: 20px;
+		font-weight: 600;
+		text-transform: uppercase;
+		border: none;
+		transition: all 0.3s linear;
+		float: right;
+		/* clear: both; */
+	}
+
+}
+
+/* CSS from MKDES */
+/* ----- Popup ----- */
+
+
+.popup {
+	display: block;
+	transition: all 0.6s;
+	-ms-transition: all 0.6s;
+	-webkit-transition: all 0.6s;
+	-moz-transition: all 0.6s;
+	-o-transition: all 0.6s;
+	position: fixed;
+	top: 0;
+	width: 60%;
+	background: rgba(0, 0, 0);
+	height: 100vh;
+	right: -100%;
+	z-index: 100;
+	padding: 10vh 0 0 0;
+}
+
+.popup h2 {
+	display: block;
+	font-size: 42px;
+	color: #fff;
+	font-weight: 600;
+}
+
+.popup p {
+	display: block;
+	font-size: 16px;
+	line-height: 24px;
+	color: #bcbbbb;
+}
+
+.popup input[type="text"],
+.popup input[type="email"], textarea {
+	display: block;
+	background: none;
+	border: none;
+	color: #fff;
+	width: 100%;
+	padding: 20px 0 20px 0;
+	font-size: 17px;
+	border-bottom: 1px #3b3a3a solid;
+	margin: 20px 0;
+	outline: none;
+	font-weight: 200
+}
+
+.popup input[type=submit] {
+	margin-top: 30px;
+}
+
+.close-popup {
+	display: block;
+	position: absolute;
+	top: 30px;
+	right: 10%;
+	width: 30px;
+	height: 30px;
+	background: url(../../img/icon/close.svg) center center no-repeat;
+	background-size: 30px;
+	cursor: pointer;
+}
+
+
+.messaged {
+	background: #fff;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 600;
+	padding: 12px 30px;
+	border-radius: 3px;
+	coursor: pointer;
+	float: left;
+}
+
+.messaged:hover {
+	opacity: 0.8;
+}
+
+
+.sender {
+	display: block;
+	width: 30px;
+	height: 30px;
+	float: right;
+	margin: 70px 0 0 20px;
+	color: #d8d8d8;
+	font-size: 13px;
+}
+
+.sender:hover {
+	opacity: 0.9;
+}
+
+#telegram {
+	background: url(../../img/icon/telegram.svg) top center no-repeat;
+	background-size: 25px;
+}
+
+#whatsapp {
+	background: url(../../img/icon/whatsapp.svg) top center no-repeat;
+	background-size: 25px;
+}
+
+/* #vkontakte {
+	background: url(img/vk2.svg) top center no-repeat;
+	background-size: 25px;
+} */
+
+
+/* ------------------ */
+
+.wrap {
+	display: block;
+	margin: 0 auto;
+	width: 80%;
+	max-width: 1400px;
+}
+
+#orand:hover {
+	color: #fff;
+}
+
+.kirim {
+	color: #000;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.clear {
+	clear: both;
+}
+
+.stj {
+	font-size: 10px;
+	letter-spacing: 0.5px;
+	float: left;
+	position: relative;
+	margin-top: -90px;
+	color: #bcbbbb;
+}
+
+ @media (max-width: 768px) {
+
+ 	/* .col3 {
+ 		width: 50%;
+	 } */
+	 
+	.popup {
+		z-index: 100;
+	}
+
+ 	.popup h2 {
+ 		font-size: 28px;
+ 	}
+
+
+ 	.popup p {
+		display: block;
+ 		font-size: 13px;
+		 line-height: 18px;
+ 	}
+
+ 	.popup input[type="text"],
+ 	.popup input[type="email"] {
+ 		padding: 10px 0 10px 10px;
+ 		font-size: 15px;
+ 	}
+
+ 	.messaged {
+ 		font-size: 14px;
+ 		padding: 10px 25px;
+	 }
+	 
+	 
+
+
+ }
