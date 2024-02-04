@@ -7,7 +7,7 @@ Description:
 Author: Arbi Syarifudin.
 Author URI: http://arbisyarifudin.com
 */
-	
+
 
 
 @import url('https://fonts.googleapis.com/css?family=Comfortaa:700');
@@ -16,13 +16,14 @@ Author URI: http://arbisyarifudin.com
 
 
 body {
-  display: none;
+	display: none;
 }
 
 
 /* ----------------- */
 
-body, html {
+body,
+html {
 	font-family: 'Montserrat', sans-serif;
 	/* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
 	background: #000;
@@ -58,7 +59,8 @@ html {
 }
 
 
-a, img,
+a,
+img,
 .send,
 .messaged {
 	transition: all 0.4s;
@@ -114,7 +116,8 @@ header {
 	display: block;
 	width: 100%;
 	padding: 30px 0 0 0;
-	max-width: 1400px;
+	/* max-width: 1400px; */
+	margin: 0 auto;
 }
 
 
@@ -280,7 +283,7 @@ main {
 	padding: 0;
 	float: left;
 	padding: 8% 0 0 0;
-	
+
 }
 
 .foto {
@@ -311,9 +314,9 @@ main {
 	/* color: #c0c0c0; */
 	padding-top: 15px;
 	display: block;
-    color: #cccaca;
-    line-height: 24px;
-    font-weight: 400;
+	color: #cccaca;
+	line-height: 24px;
+	font-weight: 400;
 }
 
 /* .foto {
@@ -340,6 +343,7 @@ footer {
 footer .lat-blog {
 	margin-bottom: 35px;
 }
+
 /* 
 footer .lat-blog {
 	 display: block;
@@ -388,12 +392,13 @@ footer .lat-blog h5 a:hover {
 	text-align: center;
 	line-height: 50px;
 	/* transition: all 0.3s linear; */
+	background-color: #ff0000;
 }
 
 .sosial a:hover {
 	background: #0057ff;
 	color: #e2e2e2
-	/* font-size: 23px; */
+		/* font-size: 23px; */
 }
 
 .sosial ul li.sosmed a {
@@ -402,7 +407,7 @@ footer .lat-blog h5 a:hover {
 }
 
 .sosial a.sorot {
-	background: #0f5fff;
+	background-color: #0f5fff;
 }
 
 .sosial a.sorot:hover {
@@ -412,6 +417,7 @@ footer .lat-blog h5 a:hover {
 .sosial ul .sosmed {
 	display: inline-block;
 }
+
 /* 
 li sosmed {
 	margin: 0;
@@ -462,6 +468,7 @@ li sosmed {
 	.menux {
 		display: block;
 	}
+
 	.foto {
 		right: 0%;
 		background: url(../../img/foto.png) top left no-repeat;
@@ -473,127 +480,7 @@ li sosmed {
 		display: none;
 	}
 }
-	
 
-/* CSS for MOBILE */
-
-@media only screen and (max-width: 1000px) {
-
-	.siapa h1 {
-		display: block;
-		/* width: 60%; */
-		padding-left: 20px;
-		font-size: 45px;
-		line-height: 48px;
-		margin-bottom: 0;
-		text-align: right;
-	}
-
-	.siapa p {
-		font-size: 15px;
-		display: block;
-		/* width: 60%; */
-		padding-left: 20px;
-		line-height: 24px;
-		text-align: right;
-		/* letter-spacing: 0.2px; */
-	}
-	.siapa p span {
-		display: block;
-	}
-
-	.foto {
-		top: 12%;
-		right: -55%;
-		background: url(../../img/foto.png) top left no-repeat;
-		background-size: 100%;
-		width: 120%;
-	}
-
-	/* div.foto img {
-		postition: absolute;
-		right: -280px;
-		top: -250px;
-		width: 900px;
-		z-index: 90;
-	} */
-
-	footer {
-		position: absolute;
-		margin: 0;
-		padding: 0;
-		bottom: -10px;
-
-	}
-
-	footer .lat-blog {
-		position: absolute;
-		font-size: 10px;
-		display: left;
-		bottom: 50px;
-	}
-
-	footer .lat-blog h4 {
-		font-size: 13px;
-	}
-
-	footer .lat-blog h5 a {
-		font-size: 13px;
-	}
-
-	.sosial {
-		position: absolute;
-		/* float: left; */
-		left: -40px;
-		width: 100%;
-		bottom: -3px;
-	}
-
-	.sosial a {
-		height: 50px;
-		display: inline-block;
-		margin: 0;
-		padding: 0;
-		font-size: 20px;
-		line-height: 40px;
-		width: 60px;
-		background: rgba(0, 0, 0, 0.7);
-	}
-
-	.sosial ul li.sosmed a {
-		padding: 0;
-		margin: 0 -7px 0 0;
-	}
-
-	.sosial a.sorot{
-		background: #0057ff;
-	}
-
-	.hire-me {
-		position: relative;
-		float: right;
-		margin: 0;
-	}
-
-	.hire-me button.hire-text-2 {
-		width: 200px;
-		height: 40px;
-		margin: 0 -15px 0 0;
-		padding: 0;
-		font-size: 15px;
-	}
-	
-
-	.hire-me .fas {
-		padding-left: 10px;
-	}
-
-	.hire-me button:hover i.fas {
-		padding-left: 20px;
-	}
-
-
-}
 
 /* ----- Popup ----- */
 
@@ -630,7 +517,8 @@ li sosmed {
 }
 
 .popup input[type="text"],
-.popup input[type="email"], textarea {
+.popup input[type="email"],
+textarea {
 	display: block;
 	background: none;
 	border: none;
@@ -746,42 +634,180 @@ li sosmed {
 	font-size: 13px;
 }
 
- @media (max-width: 768px) {
+/* CSS for MOBILE */
 
- 	/* .col3 {
+@media only screen and (max-width: 1000px) {
+
+	.siapa h1 {
+		display: block;
+		/* width: 60%; */
+		padding-left: 20px;
+		font-size: 45px;
+		line-height: 48px;
+		margin-bottom: 0;
+		text-align: right;
+	}
+
+	.siapa p {
+		font-size: 15px;
+		display: block;
+		/* width: 60%; */
+		padding-left: 20px;
+		line-height: 24px;
+		text-align: right;
+		/* letter-spacing: 0.2px; */
+	}
+
+	.siapa p span {
+		display: block;
+	}
+
+	.foto {
+		top: 12%;
+		right: -55%;
+		background: url(../../img/foto.png) top left no-repeat;
+		background-size: 100%;
+		width: 120%;
+	}
+
+	/* div.foto img {
+		postition: absolute;
+		right: -280px;
+		top: -250px;
+		width: 900px;
+		z-index: 90;
+	} */
+
+	footer {
+		position: absolute;
+		margin: 0;
+		padding: 0;
+		bottom: -10px;
+
+	}
+
+	footer .lat-blog {
+		position: absolute;
+		font-size: 10px;
+		display: left;
+		bottom: 50px;
+	}
+
+	footer .lat-blog h4 {
+		font-size: 13px;
+	}
+
+	footer .lat-blog h5 a {
+		font-size: 13px;
+	}
+
+	.sosial {
+		position: absolute;
+		/* float: left; */
+		left: -40px;
+		width: 100%;
+		bottom: -3px;
+	}
+
+	.sosial a {
+		height: 50px;
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		font-size: 20px;
+		line-height: 40px;
+		width: 60px;
+		background: rgba(0, 0, 0, 0.7);
+	}
+
+	.sosial ul li.sosmed a {
+		padding: 0;
+		margin: 0 -7px 0 0;
+	}
+
+	.sosial a.sorot {
+		background: #0057ff;
+	}
+
+	.hire-me {
+		position: absolute;
+		right: 0;
+		margin: 0;
+	}
+
+	.hire-me button.hire-text-2 {
+		width: 200px;
+		height: 40px;
+		margin: 0 -15px 0 0;
+		padding: 0;
+		font-size: 15px;
+	}
+
+
+	.hire-me .fas {
+		padding-left: 10px;
+	}
+
+	.hire-me button:hover i.fas {
+		padding-left: 20px;
+	}
+
+
+}
+
+@media (max-width: 768px) {
+
+	/* .col3 {
  		width: 50%;
 	 } */
-	 
+
 	.popup {
 		z-index: 100;
 	}
 
- 	.popup h2 {
- 		font-size: 28px;
- 	}
+	.popup h2 {
+		font-size: 28px;
+	}
 
 
- 	.popup p {
+	.popup p {
 		display: block;
- 		font-size: 13px;
+		font-size: 13px;
 		line-height: 18px;
- 	}
+	}
 
- 	.popup input[type="text"],
- 	.popup input[type="email"] {
- 		padding: 10px 0 10px 10px;
- 		font-size: 15px;
- 	}
+	.popup input[type="text"],
+	.popup input[type="email"] {
+		padding: 10px 0 10px 10px;
+		font-size: 15px;
+	}
 
- 	.messaged {
- 		font-size: 14px;
- 		padding: 10px 25px;
-	 }
-	 
-	 .stj {
-		 font-size: 10px;
-	 }
-	 
+	.messaged {
+		font-size: 14px;
+		padding: 10px 25px;
+	}
+
+	.stj {
+		font-size: 10px;
+	}
 
 
- }
+
+}
+
+@media only screen and (max-width: 490px) {
+	.hire-me {
+		position: absolute;
+		right: 0;
+	}
+
+	.hire-me button.hire-text {
+		max-width: 100%;
+		width: 200px;
+		font-size: 15px;
+	}
+
+	.foto {
+		background-position: 0 120px;
+	}
+}
