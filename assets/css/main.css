@@ -82,7 +82,11 @@ body {
   color: #cccaca;
 }
 #homepage .hero .introduction .description small {
-  font-size: 15px;
+  font-size: 14px;
+  color: #9c9c9c;
+  display: inline-block;
+  margin-top: 10px;
+  line-height: 1.7;
 }
 #homepage .homepage-photo {
   position: absolute;
