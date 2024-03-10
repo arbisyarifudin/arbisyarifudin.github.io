@@ -76,18 +76,52 @@ body {
                 }
             }
         }
+
+        &-toggler {
+            border: 0;
+            padding: 2px 5px;
+
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+
+            &-icon {
+                background-image: url('/icons/menu.svg');
+                padding: 5px;
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        .menu-cta-btn {
+            color: $light;
+            padding: 2px 5px;
+            border-radius: 5px;
+            font-size: 25px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            line-height: 1;
+            animation: scaleAnimation 0.5s infinite alternate;
+
+            &:hover {
+                background-color: darken($primary, 10%);
+            }
+        }
     }
 }
 
 // Define scale animation
 @keyframes scaleAnimation {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.2); }
-}
+    0% {
+        transform: scale(1);
+    }
 
-#main {
-    height: calc(100vh - 80px);
-    overflow: hidden;
+    100% {
+        transform: scale(1.2);
+    }
 }
 
 #footer {
@@ -103,472 +137,33 @@ body {
     }
 }
 
-#homepage {
-    position: relative;
-    height: calc(100vh - 75px);
-    // overflow: hidden;
-    overflow: visible;
-
-    .hero {
-        height: 100%;
-        display: flex;
-        align-items: center;
-
-        .introduction {
-            margin-top: -100px;
-            z-index: 10;
-            position: relative;
-
-            .title {
-                font-size: 75px;
-                line-height: 1.1;
-                font-weight: 700;
-            }
-
-            .description {
-                padding-top: 15px;
-                font-size: 20px;
-                line-height: 1.5;
-                font-weight: 400;
-                color: $textSecondary;
-
-                small {
-                    font-size: 14px;
-                    color: #9c9c9c;
-                    display: inline-block;
-                    margin-top: 10px;
-                    line-height: 1.7;
-                }
-            }
-        }
-    }
-
-    .homepage-photo {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 50%;
-        height: 100%;
-        background-image: url(/images/photo.png);
-        background-position: bottom center;
-        background-repeat: no-repeat;
-        background-size: auto 100%;
-        z-index: 5;
-    }
-
-    .footer-cta {
-        position: absolute;
-        bottom: 0px;
-        left: 0;
-        width: 100%;
-        z-index: 10;
-
-        .latests {
-            .title {
-                font-size: 12px;
-                text-transform: uppercase;
-                color: #c0c0c0;
-            }
-
-            .post-title {
-                font-size: 16px;
-                color: $light;
-
-                a {
-                    color: $light;
-                    text-decoration: none;
-                    transition: all 0.3s ease;
-
-                    &:hover {
-                        color: #c0c0c0;
-                        border-left: 5px solid #0057ff;
-                        padding-left: 10px;
-                    }
-                }
-            }
-        }
-
-        .contact {
-            position: fixed;
-            bottom: -15px;
-            right: 0;
-
-            &-row {
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
-
-                li {
-                    font-size: 20px;
-                    background-color: $light;
-                    text-transform: uppercase;
-                    font-weight: 600;
-                    height: 50px;
-                    display: flex;
-                    align-items: center;
-
-                    a {
-                        display: inline-block;
-                        padding: 10px 25px;
-                        transition: all 0.3s ease;
-                        color: $dark;
-                        text-decoration: none;
-                    }
-
-                    &.youtube,
-                    &.instagram {
-                        font-size: 25px;
-
-                        a {
-                            color: $light;
-                        }
-                    }
-
-                    &.youtube {
-                        background-color: #FF0000;
-                    }
-
-                    &.instagram {
-                        background-color: #0f5fff;
-                    }
-
-                    &.cta {
-                        min-width: 290px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-
-                        svg {
-                            transition: all 0.3s ease;
-                            margin-top: -3px;
-
-                            path {
-                                stroke: currentColor;
-                                stroke-width: 0.5;
-                            }
-                        }
-
-                        &:hover {
-                            svg {
-                                margin-left: 25px !important;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-/* RESPONSIVE 1*/
-@media (max-width: 1198px) {
-    #homepage {
-        .homepage-photo {
-            width: 80%;
-            right: -200px;
-        }
-    }
-}
-
-
 /* TABLET */
-
-@media (max-width: 991px) {
-    #homepage {
-        overflow: visible;
-
-        .hero {
-            .introduction {
-                .title {
-                    font-size: 50px;
-                }
-
-                .description {
-                    font-size: 16px;
-
-                    small {
-                        font-size: 12px;
-                    }
-                }
-            }
-        }
-
-        .homepage-photo {
-            width: 100%;
-            height: 150%;
-            background-size: 100% auto;
-            background-position: bottom right;
-            right: -280px;
-            bottom: -100px;
-        }
-
-        .footer-cta {
-            position: fixed;
-            bottom: 0;
-            left: 20px;
-
-            .latests {
-                .title {
-                    font-size: 10px;
-                }
-
-                .post-title {
-                    font-size: 14px;
-                }
-            }
-
-            .contact {
-                li {
-                    font-size: 18px;
-                    height: 50px;
-
-                    &.cta {
-                        min-width: 200px;
-                        font-size: 16px;
-                    }
-                }
-            }
-        }
-    }
-}
+@media (min-width: 768px) {}
 
 /* MOBILE */
-
-@media (max-width: 767px) {    
-    #homepage {
-        overflow: visible;
-
-        .hero {
-            .introduction {
-                .title {
-                    font-size: 40px;
-                }
-
-                .description {
-                    font-size: 14px;
-
-                    small {
-                        font-size: 11px;
-                    }
-                }
-            }
-        }
-
-        .homepage-photo {
-            width: 100%;
-            height: 100%;
-            background-size: 100% auto;
-            background-position: bottom center;
-            right: -200px;
-            bottom: 0;
-        }
-
-        .footer-cta {
-            .latests {
-                .title {
-                    font-size: 8px;
-                }
-
-                .post-title {
-                    font-size: 12px;
-                }
+@media (max-width: 767px) {
+    #header {
+        .navbar {
+            .container {
+                position: relative;
             }
 
-            .contact {
-                position: fixed;
-                right: 0;
-
-                li {
-                    font-size: 16px;
-                    height: 50px;
-                    
-                    a {
-                        padding: 5px 20px;
-                    }
-
-                    &.cta {
-                        min-width: 100px;
-
-                        .text {
-                            display: none;
-                        }
-
-                        svg {
-                            margin: 0;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-/* EXTRA SMALL */
-
-@media (max-width: 575px) {
-    #homepage {
-        .hero {
-            .introduction {
-                .title {
-                    font-size: 50px;
-                }
-
-                .description {
-                    font-size: 16px;
-
-                    small {
-                        font-size: 12px;
-                    }
-                }
-            }
-        }
-
-        .homepage-photo {
-            width: 110%;
-            height: 100%;
-            background-size: cover;
-            background-position: left center;
-            right: -150px;
-            bottom: 0;
-        }
-
-        .footer-cta {
-            .latests {
-                .title {
-                    font-size: 16px;
-                }
-
-                .post-title {
-                    font-size: 14px;
-                }
+            &-collapse {
+                position: absolute;
+                top: 50px;
+                left: 0;
+                width: 100%;
+                background-color: $dark;
+                z-index: 11;
             }
 
-            .contact {
-                position: fixed;
-                right: 0;
-
-                &-row {
-                    flex-direction: column;
-                    align-items: flex-end;
-                }
-
-                li {
-                    // font-size: 14px;
-                    // height: 50px;
-
-                    font-size: 21px !important;
-                    height: unset;
-                    // width: 100px;
-                    width: 60px;
-                    align-items: center;
-                    justify-content: center;
-                    
-                    a {
-                        padding: 15px 15px;
-                    }
-
-                    &.cta {
-                        min-width: 60px;
-                        // min-width: unset;
-
-                        .text {
-                            display: none;
-                        }
-
-                        svg {
-                            width: 28px;
-                            height: 28px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-/* EXTRA EXTRA SMALL */
-
-@media (max-width: 376px) {
-    #homepage {
-        .hero {
-            .introduction {
-                .title {
-                    font-size: 35px;
-                }
-
-                .description {
-                    font-size: 12px;
-
-                    small {
-                        font-size: 8px;
-                    }
-                }
-            }
-        }
-
-        .homepage-photo {
-            width: 120%;
-            height: 100%;
-            background-size: cover;
-            background-position: left center;
-            right: -150px;
-            bottom: 0;
-        }
-
-        .footer-cta {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-
-            .latests {
-                padding-left: 20px;
-
-                .title {
-                    font-size: 10px;
-                }
-
-                .post-title {
-                    font-size: 10px;
-                }
-            }
-
-            .contact {
-                position: fixed;
-
-                &-row {
-                    flex-direction: column;
-                    align-items: flex-end;
-                }
-
-                li {
-                    font-size: 12px;
-                    height: unset;
-                    width: 50px;
-                    align-items: center;
-                    justify-content: center;
-                    
-                    a {
-                        padding: 10px 10px;
-                    }
-
-                    &.cta {
-                        min-width: unset;
-                        font-size: 12px;
-                        
-                        a {
-                            padding: 10px;
-                        }
-
-                        .text {
-                            display: none;
-                        }
-
-                        svg {
-                            width: 25px;
-                            height: 25px;
-                        }
-                    }
-                }
+            .nav-item {
+                margin-right: 0;
+                font-size: 14px;
+                color: #bdbcbc;
+                padding: 15px 0;
+                border-top: 1px rgba(255, 255, 255, 0.1) solid;
+                text-align: left;
             }
         }
     }

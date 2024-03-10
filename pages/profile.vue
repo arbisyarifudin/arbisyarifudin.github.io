@@ -2,7 +2,7 @@
     <div id="page" class="page profile">
         <div class="container">
             <div class="row align-items-centerx">
-                <div class="col-md-4 text-center">
+                <div class="col-lg-4 col-md-4 text-center">
                     <div class="profile-left">
                         <img src="/images/photo.png" alt="Profile Picture" class="img-fluid profile-image">
                         <div class="profile-summary">
@@ -26,7 +26,7 @@
                         </ul> -->
                     </div>
                 </div>
-                <div class="col-md-8">
+                <div class="col-lg-8 col-md-8">
                     <div class="scrollable-area">
                         <section class="profile-summary">
                             <div class="profile-short">
@@ -289,7 +289,7 @@
                     margin-top: -10px;
 
                     a {
-                        font-size: 0.9rem;
+                        font-size: 1rem;
                         color: #0f5fff;
                         text-decoration: none;
                     }
@@ -335,6 +335,42 @@
                 margin-bottom: 0.4rem;
                 color: #cccaca;
             }
+        }
+    }
+}
+
+/* TABLET */
+
+@media (max-width: 991px) {
+    .profile {
+        &-left {
+            .profile {
+                &-image {
+                    width: 150px;
+                    height: 150px;
+                }
+
+                &-name {
+                    font-size: 1.8rem;
+                }
+
+                &-role {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 767px) {
+    .profile {
+        .scrollable-area {
+            padding-right: 0;
+            height: auto;
+            overflow-y: visible;
+            margin-top: 40px;
         }
     }
 }
