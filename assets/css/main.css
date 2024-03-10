@@ -24,19 +24,32 @@ body {
   align-items: center;
 }
 #header .navbar .nav-item.message {
-  font-size: 18px;
+  font-size: 21px;
+  animation: scaleAnimation 0.5s infinite alternate;
   transition: all 0.3s ease;
 }
 #header .navbar .nav-item.message a {
   color: #fff;
 }
 #header .navbar .nav-item.message:hover {
-  transform: scale(1.2);
+  transform: scale(1.3);
+  animation: none;
+}
+#header .navbar .nav-item.message:hover a {
+  color: #0f5fff;
 }
 #header .navbar .nav-item .nav-link {
   padding: 5px 10px;
 }
 
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
 #main {
   height: calc(100vh - 80px);
   overflow: hidden;
@@ -204,12 +217,12 @@ body {
     font-size: 12px;
   }
   #homepage .homepage-photo {
-    width: 110%;
-    height: 100%;
+    width: 100%;
+    height: 150%;
     background-size: 100% auto;
     background-position: bottom right;
     right: -280px;
-    bottom: 0;
+    bottom: -100px;
   }
   #homepage .footer-cta {
     position: fixed;
