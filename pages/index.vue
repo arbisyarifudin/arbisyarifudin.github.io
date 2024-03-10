@@ -1,0 +1,364 @@
+<template>
+    <div id="homepage" class="homepage container">
+        <section id="hero" class="section hero">
+            <div class="row align-items-center w-100">
+                <div class="col-lg-7 col-md-8 col-sm-9 col-7">
+                    <div class="introduction">
+                        <h1 class="title">I am Arbi Syarifudin.</h1>
+                        <p id="ticker" class="description" style="opacity: 0"><span>A professional web developer based
+                                in Indonesia.</span>
+                            <br><small>Specializing
+                                in building (and occasionally designing) exceptional, high-quality websites and
+                                applications.</small>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-4 col-sm-3 col-12">
+                    <div class="homepage-photo">
+                        <img src="public/images/photo.png" alt="Arsyaf" class="img-fluid d-none">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="footer-cta" class="section footer-cta">
+            <div class="row">
+                <div class="col-lg-7 col-12">
+                    <div class="latests">
+                        <h2 class="title">My Latest Blog</h2>
+                        <p class="post-title"><a href="#">How to create a beautiful website with Tailwind CSS</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-12">
+                    <div class="contact">
+                        <ul class="contact-row list-unstyled">
+                            <li class="youtube"><a href="#"><i class="bi bi-youtube"></i></a></li>
+                            <li class="instagram"><a href="#"><i class="bi bi-instagram"></i></a></li>
+                            <li class="cta"><a href="#"><span class="text">Work with Me</span> <svg
+                                        xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                        class="bi bi-arrow-right msx-md-2" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                    </svg></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="sparkle">
+            <div class="box a1">
+                <div class="icon"></div>
+            </div>
+            <div class="box triangle a2">
+                <div class="icon"></div>
+            </div>
+            <div class="box a3">
+                <div class="icon"></div>
+            </div>
+            <div class="box a4">
+                <div class="icon"></div>
+            </div>
+            <div class="box circle a5">
+                <div class="icon"></div>
+            </div>
+            <div class="box a6">
+                <div class="icon spin"></div>
+            </div>
+            <div class="box a7">
+                <div class="icon"></div>
+            </div>
+            <div class="box a8">
+                <div class="icon"></div>
+            </div>
+            <div class="box cross a9">
+                <div class="icon"></div>
+            </div>
+            <div class="box a10">
+                <div class="icon"></div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script setup>
+
+let intervalId = null
+onMounted(() => {
+    const ticker = document.getElementById('ticker')
+    ticker.style.opacity = 1
+    ticker.innerHTML = '<span></span><br><small></small>'
+
+    const text = 'A professional web developer based in Indonesia.'
+    const small = 'Specializing in building (and occasionally designing) exceptional, high-quality websites and applications.'
+
+    let speed = 50
+    let isTyping = ref(false)
+
+    function typeWriter(target, message, index = 0) {
+        if (index < message.length) {
+            ticker.querySelector(target).textContent += message.charAt(index)
+            setTimeout(() => typeWriter(target, message, index + 1), speed)
+        } else {
+            isTyping.value = false
+        }
+    }
+
+    // intervalId = setInterval(() => {
+    //     if (!isTyping.value) {
+    //         isTyping.value = true
+    //         ticker.querySelector('span').textContent = ''
+    //         ticker.querySelector('small').textContent = ''
+    //         typeWriter('span', text)
+    //         setTimeout(() => typeWriter('small', small), 2000)
+    //     }
+    // }, (text.length + small.length) * speed + 2000)
+
+    typeWriter('span', text)
+    setTimeout(() => typeWriter('small', small), 2000)
+
+})
+
+onUnmounted(() => {
+    clearInterval(intervalId)
+})
+
+</script>
+
+<style scoped lang="scss">
+.sparkle {
+    .box {
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        bottom: 0;
+        // border: 1px solid #4F575A;
+        transform: translate3d(0px, 100%, 0);
+        /* X, Y, Z */
+    }
+
+    .icon {
+        height: 30px;
+        width: 30px;
+        border: 1px solid #4F575A;
+    }
+
+    .triangle {
+        .icon {
+            width: 0;
+            height: 0;
+            border-left: 14px solid transparent;
+            border-right: 14px solid transparent;
+            border-bottom: 25px solid #FF0000;
+            border-top: 25px solid transparent;
+        }
+    }
+
+    .circle {
+        .icon {
+            border-radius: 50%;
+        }
+    }
+
+    .cross {
+        .icon {
+            border: none;
+            position: relative;
+            width: 30px;
+            height: 30px;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 15px;
+                height: 30px;
+                width: 2px;
+                background-color: #0f5fff;
+            }
+
+            &::before {
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+
+    /* KEYFRAMES */
+    @keyframes animateY {
+        0% {
+            transform: translateY(100%);
+            opacity: 1;
+        }
+
+        75% {
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateY(-500px);
+            opacity: 0;
+        }
+    }
+
+    @keyframes animateX {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(50px);
+        }
+    }
+
+    @keyframes animateYWithSpin {
+        0% {
+            transform: translateY(100%) rotate(0deg);
+            opacity: 1;
+        }
+
+        15% {
+            transform: rotate(180deg);
+        }
+
+        30% {
+            transform: rotate(360deg);
+        }
+
+        45% {
+            transform: rotate(540deg);
+        }
+
+        60% {
+            transform: rotate(720deg);
+        }
+
+        75% {
+            opacity: 1;
+            transform: rotate(900deg);
+        }
+
+        100% {
+            transform: translateY(-500px) rotate(1080deg);
+            opacity: 0;
+        }
+    }
+
+    /* ANIMATIONS */
+    .a1 {
+        animation: animateY 35s ease-out infinite;
+        animation-delay: 15s;
+
+        .icon {
+            animation: animateX 2s ease-in-out infinite alternate;
+        }
+    }
+
+    .a2 {
+        animation: animateY 30s ease-out infinite;
+        left: 5%;
+        animation-delay: 3s;
+
+        .icon {
+            animation: animateX 4s ease-in-out infinite alternate;
+        }
+    }
+
+    .a3 {
+        animation: animateY 38s ease-out infinite;
+        animation-delay: 10s;
+        left: 10%;
+
+        .icon {
+            animation: animateX 2s ease-in-out infinite alternate;
+        }
+    }
+
+    .a4 {
+        animation: animateY 32s linear infinite;
+        left: 20%;
+
+        .icon {
+            animation: animateX 3s ease-in-out infinite alternate;
+        }
+    }
+
+    .a5 {
+        animation: animateY 39s linear infinite;
+        left: 30%;
+
+        .icon {
+            animation: animateX 4s ease-in-out infinite alternate;
+        }
+    }
+
+    .a6 {
+        animation: animateY 31s linear infinite;
+        animation-delay: 20s;
+
+        left: 50%;
+
+        .icon {
+            animation: animateX 2s ease-in-out infinite alternate;
+        }
+    }
+
+    .a7 {
+        animation: animateY 30s linear infinite;
+
+        left: 65%;
+
+        .icon {
+            animation: animateX 2s ease-in-out infinite alternate;
+        }
+    }
+
+    .a8 {
+        animation: animateY 32s linear infinite;
+
+        left: 80%;
+
+        .icon {
+            animation: animateX 3s ease-in-out infinite alternate;
+        }
+    }
+
+    .a9 {
+        animation: animateY 39s linear infinite;
+        animation-delay: 7s;
+
+        left: 90%;
+
+        .icon {
+            animation: animateX 4s ease-in-out infinite alternate;
+        }
+    }
+
+    .a10 {
+        animation: animateY 36s linear infinite;
+
+        left: 95%;
+
+        .icon {
+            animation: animateX 2s ease-in-out infinite alternate;
+        }
+    }
+
+    .icon.spin {
+        animation: animateYWithSpin 35s linear infinite;
+    }
+}
+
+#particles-js {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+</style>
