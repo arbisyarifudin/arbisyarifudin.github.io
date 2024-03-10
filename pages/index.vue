@@ -15,7 +15,7 @@
                 </div>
                 <div class="col-lg-5 col-md-4 col-sm-3 col-12">
                     <div class="homepage-photo">
-                        <img src="public/images/photo.png" alt="Arsyaf" class="img-fluid d-none">
+                        <img src="/images/photo.png" alt="Arsyaf" class="img-fluid d-none">
                     </div>
                 </div>
             </div>

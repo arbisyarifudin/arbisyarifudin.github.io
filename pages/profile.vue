@@ -4,7 +4,7 @@
             <div class="row align-items-centerx">
                 <div class="col-md-4 text-center">
                     <div class="profile-left">
-                        <img src="public/images/photo.png" alt="Profile Picture" class="img-fluid profile-image">
+                        <img src="/images/photo.png" alt="Profile Picture" class="img-fluid profile-image">
                         <div class="profile-summary">
                             <h1 class="profile-name">Arbi Syarifudin</h1>
                             <h3 class="profile-role">a Full Stack Developer,<br>loves to code and design</h3>
