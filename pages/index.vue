@@ -122,6 +122,7 @@ onMounted(() => {
 onUnmounted(() => {
     clearInterval(intervalId)
 })
+
 </script>
 
 <style scoped lang="scss">
@@ -351,5 +352,13 @@ onUnmounted(() => {
     .icon.spin {
         animation: animateYWithSpin 35s linear infinite;
     }
+}
+
+#particles-js {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 </style>

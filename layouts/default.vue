@@ -1,5 +1,6 @@
 <template>
     <div>
+        <div id="top-alert" class="top-alert">This website is under developmet.</div>
         <header id="header" class="header">
             <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
                 <div class="container">
@@ -11,22 +12,22 @@
                     <div class="collapse navbar-collapse" id="menu">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                <router-link class="nav-link" :to="{ path: '/' }">Home</router-link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Profile</a>
+                                <router-link class="nav-link" :to="{ path: '/profile' }">Profile</router-link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Work</a>
+                                <router-link class="nav-link" :to="{ path: '/work' }">Work</router-link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Service</a>
+                                <router-link class="nav-link" :to="{ path: '/service' }">Service</router-link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Blog</a>
+                                <router-link class="nav-link" :to="{ path: '/blog' }">Blog</router-link>
                             </li>
                             <li class="nav-item message">
-                                <a class="nav-link" href="#"><i class="bi bi-envelope"></i></a>
+                                <button class="nav-link"><i class="bi bi-envelope"></i></button>
                             </li>
                         </ul>
                     </div>
@@ -35,7 +36,7 @@
         </header>
 
         <main id="main" class="main">
-            <RouterView />
+            <NuxtPage />
         </main>
 
         <footer id="footer" class="footer">
@@ -52,7 +53,7 @@
 
 <script setup>
 useHead({
-    title: 'Home',
+    title: 'Arsyaf.dev',
     link: [
         {
             rel: 'stylesheet',
