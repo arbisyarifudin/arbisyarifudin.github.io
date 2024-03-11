@@ -1,6 +1,6 @@
 <template>
     <div>
-        <!-- <div id="top-alert" class="top-alert">This website is under developmet.</div> -->
+        <div id="top-alert" class="top-alert">This website is under developmet.</div>
         <header id="header" class="header">
             <nav id="navbar" class="navbar navbar-expand-md navbar-dark">
                 <div class="container">
@@ -67,7 +67,8 @@ useHead({
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         {
             rel: 'stylesheet',
-            href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap'
+            // Montserrat, 400, 500, 600, 700
+            href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap'
         },
         {
             rel: 'stylesheet',

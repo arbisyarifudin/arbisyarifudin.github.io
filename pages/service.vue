@@ -3,7 +3,7 @@
         <div class="container">
             <section class="page-header">
                 <div class="page-title">My Services</div>
-                <p class="page-description">Here are some of the services I provide.</p>
+                <p class="page-description">Here are the services I can provide.</p>
             </section>
 
             <section class="service-list">

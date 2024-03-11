@@ -20,7 +20,7 @@
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="work-item__category">Web Development, Design</div>
                                     <div class="work-item__more">
-                                        <a href="#"><i class="bi bi-arrow-right"></i> View Project</a>
+                                        <router-link to="/work/project-1"><i class="bi bi-arrow-right"></i> View Project</router-link>
                                     </div>
                                 </div>
                             </div>
@@ -39,7 +39,7 @@
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="work-item__category">Web Development, Design</div>
                                     <div class="work-item__more">
-                                        <a href="#"><i class="bi bi-arrow-right"></i> View Project</a>
+                                        <router-link to="/work/project-1"><i class="bi bi-arrow-right"></i> View Project</router-link>
                                     </div>
                                 </div>
                             </div>
@@ -91,6 +91,7 @@
 
                     a {
                         font-size: 12px;
+                        font-weight: 500;
                         color: #e7e7e7;
                         text-decoration: none;
                         transition: all 0.3s ease;

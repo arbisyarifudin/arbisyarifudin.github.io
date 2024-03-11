@@ -184,7 +184,7 @@
     padding-bottom: 20px;
 
     .scrollable-area {
-        height: calc(100vh - 150px);
+        height: calc(100vh - 180px);
         overflow-y: auto;
         padding-right: 30px;
 
@@ -284,13 +284,13 @@
             }
 
             &-title {
-                font-size: 1.2rem;
+                font-size: 1rem;
                 font-weight: 700;
                 margin-bottom: 0.75rem;
             }
 
             &-company {
-                font-size: 1.44rem;
+                font-size: 1.3rem;
                 font-weight: 400;
                 margin-bottom: 0.75rem;
 
@@ -306,7 +306,7 @@
             }
 
             &-date {
-                font-size: 1rem;
+                font-size: 0.85rem;
                 font-weight: 400;
                 margin-bottom: 0.5rem;
                 color: #cccaca;
