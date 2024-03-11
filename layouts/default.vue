@@ -42,7 +42,7 @@
             <NuxtPage />
         </main>
 
-        <footer id="footer" class="footer">
+        <footer id="footer" class="footer" :class="[$route.path === '/' ? 'd-none' : '']">
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">

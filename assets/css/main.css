@@ -52,7 +52,7 @@ body {
 #header .navbar .nav-item .nav-link {
   padding: 5px 10px;
 }
-#header .navbar .nav-item .nav-link.router-link-exact-active {
+#header .navbar .nav-item .nav-link.router-link-active {
   color: var(--bs-navbar-active-color);
 }
 #header .navbar-toggler {
@@ -93,9 +93,41 @@ body {
     transform: scale(1.2);
   }
 }
+.page {
+  padding-bottom: 50px;
+}
+.page-header {
+  padding: 50px 0;
+  text-align: center;
+  background-color: #000;
+  color: #f5f5f5;
+}
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #f5f5f5;
+}
+.page-subtitle {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #9c9c9c;
+}
+.page-description {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #cccaca;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #f5f5f5;
+}
+
 #footer {
-  display: none;
-  padding: 15px 0;
+  padding: 20px 0;
   color: #fff;
   text-align: center;
   font-size: 14px;

@@ -121,11 +121,27 @@
                         <section class="profile-experience">
                             <h2 class="section-title">Experience</h2>
                             <div class="experience-item">
-                                <h3 class="experience-title">Full-stack Developer</h3>
+                                <h3 class="experience-title">Lead Developer of Satuin.id (Remote)</h3>
                                 <div class="d-flex justify-content-between">
                                     <div>
                                         <h4 class="experience-company">PT Satu Resolusi Optima (Onero Solutions)</h4>
                                         <p class="experience-company-link"><a href="https://onero.id">
+                                                <i class="bi bi-link me-1"></i>onero.id</a>
+                                        </p>
+                                    </div>
+                                    <p class="experience-date">November 2023 - Present</p>
+                                </div>
+                                <p class="experience-desc">
+                                    I am responsible as a lead developer in the development of the Satuin.id platform.
+                                </p>
+                            </div>
+                            <div class="experience-item">
+                                <h3 class="experience-title">Full-stack Developer (Remote)</h3>
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <h4 class="experience-company">PT Satu Resolusi Optima (Onero Solutions)</h4>
+                                        <p class="experience-company-link">
+                                            <a href="https://onero.id">
                                                 <i class="bi bi-link me-1"></i>onero.id</a>
                                         </p>
                                     </div>
@@ -163,13 +179,6 @@
 </template>
 
 <style lang="scss" scoped>
-.section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: #f5f5f5;
-}
-
 .profile {
     padding-top: 20px;
     padding-bottom: 20px;
