@@ -46,6 +46,18 @@
     </div>
 </template>
 
+<script setup>
+useHead({
+    title: 'Blogs',
+    meta: [
+        {
+            name: 'description',
+            content: 'Here are some of the blog posts that Arbi Syarifudin has written.'
+        }
+    ]
+})
+</script>
+
 <style lang="scss" scoped>
 .blog {
     .blog-list {

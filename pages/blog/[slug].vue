@@ -67,6 +67,30 @@
     </div>
 </template>
 
+<script setup>
+useHead({
+    title: 'The Post Title is Here',
+    meta: [
+        {
+            name: 'description',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        },
+        {
+            name: 'og:title',
+            content: 'The Post Title is Here'
+        },
+        {
+            name: 'og:description',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        },
+        {
+            name: 'og:image',
+            content: 'https://via.placeholder.com/1280x500'
+        }
+    ]
+})
+</script>
+
 <style lang="scss" scoped>
 .blog-detail {
     background-color: #f9f5f2;

@@ -51,6 +51,18 @@
     </div>
 </template>
 
+<script setup>
+useHead({
+    title: 'Works',
+    meta: [
+        {
+            name: 'description',
+            content: 'Here are some of the projects that Arbi Syarifudin has worked on.'
+        }
+    ]
+})
+</script>
+
 <style lang="scss" scoped>
 .work {
     .work-list {

@@ -163,6 +163,24 @@
     </div>
 </template>
 
+<script setup>
+
+useHead({
+    title: 'Profile',
+    meta: [
+        {
+            name: 'description',
+            content: 'Arbi Syarifudin is a Full Stack Developer, loves to code and design. He is passionate about combining programming and design to create functional and visually appealing web solutions.'
+        },
+        {
+            name: 'keywords',
+            content: 'Arbi Syarifudin, Full Stack Developer, Web Developer, Software Engineer, Laravel, Vue Js, Nuxt Js, Quasar, React Js, Node Js, Express Js, Codeigniter 4, MySQL, PostgreSQL, MongoDB, RESTful API, Linux, Ubuntu, AWS, Google Cloud, Docker, CI/CD, Git, Github, Gitlab, Postman, Insomnia, VS Code, Figma, Agile Methodology, Unit Testing, Database Designing, UI/UX Design, SEO, Google Analytics, Web Security, Performance Optimization'
+        }
+    ]
+})
+
+</script>
+
 <style lang="scss" scoped>
 .profile {
     padding-top: 20px;

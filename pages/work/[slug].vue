@@ -103,6 +103,30 @@
     </div>
 </template>
 
+<script setup>
+useHead({
+    title: 'Project 1',
+    meta: [
+        {
+            name: 'description',
+            content: 'This is a project that Arbi Syarifudin worked on in 2019. It is a web development and design project.'
+        },
+        {
+            name: 'og:title',
+            content: 'Project 1'
+        },
+        {
+            name: 'og:description',
+            content: 'This is a project that Arbi Syarifudin worked on in 2019. It is a web development and design project.'
+        },
+        {
+            name: 'og:image',
+            content: 'https://via.placeholder.com/1280x400'
+        }
+    ]
+})
+</script>
+
 <style lang="scss" scoped>
 .work-detail {
     .page-hero {
