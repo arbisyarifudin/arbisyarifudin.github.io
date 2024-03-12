@@ -41,7 +41,7 @@ export default defineNuxtPlugin(nuxtApp => {
 
     if (process.env.NODE_ENV === 'production') {
         const analytics = getAnalytics(app);
-        if (analytics.isSupported()) {
+        if (analytics) {
             console.log('firebase analytics initialized');
         }
     } else {
