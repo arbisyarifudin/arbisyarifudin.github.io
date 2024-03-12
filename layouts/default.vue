@@ -5,11 +5,11 @@
             <nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top">
                 <div class="container">
                     <router-link class="navbar-brand" to="/">Arsyaf.</router-link>
-                    <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center d-md-none">
                         <button class="btn menu-cta-btn d-md-none me-3"><i class="bi bi-envelope"></i></button>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                        <button class="navbar-toggler d-flex align-items-center" type="button" @click="menuOpened ? hideMenu() : showMenu()"
                             aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
+                            <span class="navbar-toggler-icon me-2" :class="menuOpened ? 'open' : ''"></span>
                         </button>
                     </div>
                     <div class="collapse navbar-collapse" id="menu">
@@ -26,9 +26,9 @@
                             <li class="nav-item">
                                 <router-link class="nav-link" :to="{ path: '/service' }">Service</router-link>
                             </li>
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <router-link class="nav-link" :to="{ path: '/blog' }">Blog</router-link>
-                            </li>
+                            </li> -->
                             <li class="nav-item message d-md-block d-none">
                                 <button class="nav-link"><i class="bi bi-envelope"></i></button>
                             </li>
@@ -93,10 +93,22 @@ watch(router.currentRoute, () => {
     hideMenu()
 })
 
+
+const menuOpened = ref(false)
+const showMenu = () => {
+    const navbarMenu = document.getElementById('menu')
+    const bsCollapse = new bootstrap.Collapse(navbarMenu, { toggle: false })
+    bsCollapse.show()
+
+    menuOpened.value = true
+}
+
 const hideMenu = () => {
     const navbarMenu = document.getElementById('menu')
     const bsCollapse = new bootstrap.Collapse(navbarMenu, { toggle: false })
     bsCollapse.hide()
+
+    menuOpened.value = false
 }
 
 let clickHandler = null
@@ -107,9 +119,9 @@ onMounted(() => {
     }, 5000)
 
     clickHandler = event => {
-        console.log(event.target)
         const navbarMenu = document.getElementById('menu')
-        if (!navbarMenu.contains(event.target)) {
+        const btnToggleMenu = document.querySelector('.navbar-toggler')
+        if (menuOpened.value && !navbarMenu.contains(event.target) && !btnToggleMenu.contains(event.target)) {
             hideMenu()
         }
     }

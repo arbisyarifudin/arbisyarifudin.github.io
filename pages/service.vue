@@ -56,6 +56,30 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-6">
+                        <div class="service-item">
+                            <div class="service-item__icon">
+                                <i class="bi bi-incognito"></i>
+                            </div>
+                            <div class="service-item__body">
+                                <h3 class="service-item__title">Private Tutoring</h3>
+                                <p class="service-item__description">I can help you learn web development, mobile
+                                    development, or programming in general.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="service-item">
+                            <div class="service-item__icon">
+                                <i class="bi bi-lightbulb"></i>
+                            </div>
+                            <div class="service-item__body">
+                                <h3 class="service-item__title">Consultation</h3>
+                                <p class="service-item__description">I can help you with your project by providing
+                                    consultation.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -81,6 +105,7 @@
             border: 1px solid rgba(141, 141, 141, 0.5);
             padding: 20px 30px;
             border-radius: 5px;
+            min-height: 150px;
 
             .service-item__icon {
                 font-size: 2rem;

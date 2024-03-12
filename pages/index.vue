@@ -25,15 +25,15 @@
             <div class="row">
                 <div class="col-lg-7 col-12">
                     <div class="latests">
-                        <h2 class="title">My Latest Blog</h2>
-                        <p class="post-title"><a href="#">How to create a beautiful website with Tailwind CSS</a></p>
+                        <!-- <h2 class="title">My Latest Blog</h2>
+                        <p class="post-title"><a href="#">How to create a beautiful website with Tailwind CSS</a></p> -->
                     </div>
                 </div>
                 <div class="col-lg-5 col-12">
                     <div class="contact">
                         <ul class="contact-row list-unstyled">
-                            <li class="youtube"><a href="#"><i class="bi bi-youtube"></i></a></li>
-                            <li class="instagram"><a href="#"><i class="bi bi-instagram"></i></a></li>
+                            <li class="youtube"><a href="https://youtube.com/@pekerjarimot" target="_blank"><i class="bi bi-youtube"></i></a></li>
+                            <li class="instagram"><a href="https://instagram.com/pekerjarimot" target="_blank"><i class="bi bi-instagram"></i></a></li>
                             <li class="cta"><a href="#"><span class="text">Work with Me</span> <svg
                                         xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                                         class="bi bi-arrow-right msx-md-2" viewBox="0 0 16 16">
@@ -245,6 +245,10 @@ $textSecondary: #cccaca;
                         transition: all 0.3s ease;
                         color: $dark;
                         text-decoration: none;
+
+                        &:hover {
+                            transform: scale(1.15);
+                        }
                     }
 
                     &.youtube,
@@ -283,6 +287,12 @@ $textSecondary: #cccaca;
                         &:hover {
                             svg {
                                 margin-left: 25px !important;
+                            }
+                        }
+
+                        a {
+                            &:hover {
+                                transform: scale(1);
                             }
                         }
                     }
