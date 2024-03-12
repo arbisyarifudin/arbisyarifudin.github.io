@@ -74,7 +74,7 @@ const messageText = computed(() => {
     } else if (!form.value.name && !form.value.email && form.value.message) {
         text = `Hello Arbi! I need your help about my project. ${form.value.message}`
     } else {
-        text = `Hello Arbi! I need your help about my project.`      
+        text = `Hello Arbi! I need your help about my project.`
     }
 
     return encodeURIComponent(text)
@@ -82,6 +82,24 @@ const messageText = computed(() => {
 
 const submitMessage = () => {
     console.log('submit message')
+
+    fetch('YOUR_FUNCTION_URL', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            name: 'John Doe',
+            email: 'john@example.com',
+            message: 'Hello, this is a test message.'
+        }),
+    })
+        .then(response => response.text())
+        .then(data => console.log(data))
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+
 }
 
 </script>
