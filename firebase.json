@@ -1,16 +1,14 @@
 {
-  "functions": { "source": ".output/server" },
-  "hosting": [
-    {
-      "site": "arsyaf-web",
-      "public": ".output/public",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ],
-      "cleanUrls": true,
-      "rewrites": [{ "source": "**", "function": "server" }]
-    }
-  ]
+  "hosting": {
+    "public": ".output/public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  "functions": {
+    "source": ".output/server",
+    "runtime": "nodejs20"
+  }
 }

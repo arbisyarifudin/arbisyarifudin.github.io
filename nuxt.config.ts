@@ -32,4 +32,16 @@ export default defineNuxtConfig({
   //     noscript: [{ children: 'This website requires JavaScript.' }],
   //   }
   // }
+
+  nitro: {
+    firebase: {
+      gen: 2,
+      httpsOptions: {
+        region: 'asia-southeast2',
+        maxInstances: 1,
+      },
+      nodeVersion: '18',
+    },
+  },
+  
 })
