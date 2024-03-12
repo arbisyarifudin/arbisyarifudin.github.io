@@ -1,7 +1,7 @@
 <template>
     <div id="page" class="page work-detail">
         <div class="container">
-            <section class="page-header d-flex justify-content-between">
+            <section class="page-header d-lg-flex justify-content-between pb-2 pb-md-4">
                 <div class="page-title">Project 1</div>
                 <div class="text-start">
                     <div class="page-subtitle">Overview</div>

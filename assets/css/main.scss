@@ -40,6 +40,9 @@ body {
     }
 
     .navbar {
+        // border-bottom: 1px solid red;
+        background-color: #000;
+
         .nav-item {
             font-size: 15px;
             color: $textSecondary;
@@ -122,6 +125,10 @@ body {
     100% {
         transform: scale(1.2);
     }
+}
+
+#main {
+    padding-top: 20px;
 }
 
 .page {

@@ -70,7 +70,7 @@
 <style lang="scss" scoped>
 .blog-detail {
     background-color: #f9f5f2;
-    padding-top: 20px;
+    padding-top: 30px;
     color: #282825;
 
     .post-back {

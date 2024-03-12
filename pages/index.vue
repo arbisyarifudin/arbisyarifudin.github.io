@@ -137,7 +137,7 @@ $textSecondary: #cccaca;
 
 #homepage {
     position: relative;
-    height: calc(100vh - 75px);
+    height: calc(100vh - 40px);
     // overflow: hidden;
     overflow: visible;
 
@@ -831,6 +831,15 @@ $textSecondary: #cccaca;
                     }
                 }
             }
+        }
+    }
+}
+
+// max-widtyh 415px and max-height 897px
+@media (max-width: 415px) and (max-height: 897px) {
+    #homepage {
+        .homepage-photo {
+            right: -20px;
         }
     }
 }

@@ -2,7 +2,7 @@
     <div>
         <div id="top-alert" class="top-alert">This website is under developmet.</div>
         <header id="header" class="header">
-            <nav id="navbar" class="navbar navbar-expand-md navbar-dark">
+            <nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top">
                 <div class="container">
                     <router-link class="navbar-brand" to="/">Arsyaf.</router-link>
                     <div class="d-flex align-items-center">
@@ -57,6 +57,8 @@
 <script setup>
 import '~/assets/css/main.min.css'
 
+// import { onClickOutside } from 'vue3-click-away'
+
 useHead({
     title: 'Arsyaf.dev',
     meta: [
@@ -85,11 +87,43 @@ useHead({
     noscript: [{ children: 'This website requires JavaScript.' }],
 })
 
+const router = useRouter()
+
+watch(router.currentRoute, () => {
+    hideMenu()
+})
+
+const hideMenu = () => {
+    const navbarMenu = document.getElementById('menu')
+    const bsCollapse = new bootstrap.Collapse(navbarMenu, { toggle: false })
+    bsCollapse.hide()
+}
+
+let clickHandler = null
+onMounted(() => {
+    const topAlert = document.getElementById('top-alert')
+    setTimeout(() => {
+        topAlert.style.display = 'none'
+    }, 5000)
+
+    clickHandler = event => {
+        console.log(event.target)
+        const navbarMenu = document.getElementById('menu')
+        if (!navbarMenu.contains(event.target)) {
+            hideMenu()
+        }
+    }
+    document.addEventListener('click', clickHandler)
+})
+
+onUnmounted(() => {
+    document.removeEventListener('click', clickHandler)
+})
 </script>
 
 <style scoped>
 .fixed-h {
-    height: calc(100vh - 80px);
+    height: calc(100vh - 20px);
     overflow: hidden;
 }
 </style>

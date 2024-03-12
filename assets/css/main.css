@@ -29,6 +29,9 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+#header .navbar {
+  background-color: #000;
+}
 #header .navbar .nav-item {
   font-size: 15px;
   color: #cccaca;
@@ -93,6 +96,10 @@ body {
     transform: scale(1.2);
   }
 }
+#main {
+  padding-top: 20px;
+}
+
 .page {
   padding-bottom: 50px;
 }
