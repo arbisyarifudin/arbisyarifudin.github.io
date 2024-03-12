@@ -33,6 +33,11 @@ export default defineNuxtConfig({
   //   }
   // }
 
+  runtimeConfig: {
+    sApiUrl: process.env.S_API_URL,
+    sApiKey: process.env.S_API_KEY,
+  },
+
   nitro: {
     firebase: {
       gen: 2,
@@ -43,5 +48,9 @@ export default defineNuxtConfig({
       nodeVersion: '18',
     },
   },
+
+  plugins: [
+    '~/plugins/firebase',
+  ],
   
 })

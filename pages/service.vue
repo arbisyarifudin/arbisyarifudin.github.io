@@ -26,7 +26,7 @@
                                 <i class="bi bi-pencil"></i>
                             </div>
                             <div class="service-item__body">
-                                <h3 class="service-item__title">Web Design</h3>
+                                <h3 class="service-item__title">Web Design & UI/UX</h3>
                                 <p class="service-item__description">I can help you design a website that suits your
                                     needs and preferences.</p>
                             </div>
@@ -74,9 +74,9 @@
                                 <i class="bi bi-lightbulb"></i>
                             </div>
                             <div class="service-item__body">
-                                <h3 class="service-item__title">Consultation</h3>
-                                <p class="service-item__description">I can help you with your project by providing
-                                    consultation.</p>
+                                <h3 class="service-item__title">Tech Consultation</h3>
+                                <p class="service-item__description">I can help you with your tech-related problems or
+                                    questions.</p>
                             </div>
                         </div>
                     </div>
