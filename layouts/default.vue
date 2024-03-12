@@ -6,7 +6,7 @@
                 <div class="container">
                     <router-link class="navbar-brand" to="/">Arsyaf.</router-link>
                     <div class="d-flex align-items-center d-md-none">
-                        <button class="btn menu-cta-btn d-md-none me-3"><i class="bi bi-envelope"></i></button>
+                        <button class="btn menu-cta-btn d-md-none me-3" @click="openContactDialog"><i class="bi bi-envelope"></i></button>
                         <button class="navbar-toggler d-flex align-items-center" type="button" @click="menuOpened ? hideMenu() : showMenu()"
                             aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon me-2" :class="menuOpened ? 'open' : ''"></span>
@@ -30,7 +30,7 @@
                                 <router-link class="nav-link" :to="{ path: '/blog' }">Blog</router-link>
                             </li> -->
                             <li class="nav-item message d-md-block d-none">
-                                <button class="nav-link"><i class="bi bi-envelope"></i></button>
+                                <button class="nav-link" @click="openContactDialog"><i class="bi bi-envelope"></i></button>
                             </li>
                         </ul>
                     </div>
@@ -51,11 +51,14 @@
                 </div>
             </div>
         </footer>
+
+        <ContactDialog />
     </div>
 </template>
 
 <script setup>
 import '~/assets/css/main.min.css'
+import ContactDialog from '~/components/ContactDialog.vue';
 
 // import { onClickOutside } from 'vue3-click-away'
 
@@ -65,6 +68,10 @@ useHead({
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     ],
+    htmlAttrs: {
+        lang: 'id',
+        "data-bs-theme": 'dark'
+    },
     link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         {
@@ -87,12 +94,11 @@ useHead({
     noscript: [{ children: 'This website requires JavaScript.' }],
 })
 
+/* MENU */
 const router = useRouter()
-
 watch(router.currentRoute, () => {
     hideMenu()
 })
-
 
 const menuOpened = ref(false)
 const showMenu = () => {
@@ -131,6 +137,12 @@ onMounted(() => {
 onUnmounted(() => {
     document.removeEventListener('click', clickHandler)
 })
+
+/* CONTACT DIALOG */
+const openContactDialog = () => {
+    const contactDialog = new bootstrap.Modal(document.getElementById('contactDialog'), { keyboard: false })
+    contactDialog.show()
+}
 </script>
 
 <style scoped>

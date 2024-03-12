@@ -34,7 +34,7 @@
                         <ul class="contact-row list-unstyled">
                             <li class="youtube"><a href="https://youtube.com/@pekerjarimot" target="_blank"><i class="bi bi-youtube"></i></a></li>
                             <li class="instagram"><a href="https://instagram.com/pekerjarimot" target="_blank"><i class="bi bi-instagram"></i></a></li>
-                            <li class="cta"><a href="#"><span class="text">Work with Me</span> <svg
+                            <li class="cta"><a href="#" @click.prevent="openContactDialog"><span class="text">Work with Me</span> <svg
                                         xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                                         class="bi bi-arrow-right msx-md-2" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd"
@@ -123,6 +123,11 @@ onUnmounted(() => {
     clearInterval(intervalId)
 })
 
+const openContactDialog = () => {
+    const contactDialog = new bootstrap.Modal(document.getElementById('contactDialog'), { keyboard: false })
+    contactDialog.show()
+}
+
 </script>
 
 <style scoped lang="scss">
@@ -182,10 +187,12 @@ $textSecondary: #cccaca;
         width: 50%;
         height: 100%;
         background-image: url(/images/photo.png);
+        // background-image: url(/images/photo-ai.jpg);
         background-position: bottom center;
         background-repeat: no-repeat;
         background-size: auto 100%;
         z-index: 5;
+        // border-radius: 50% 0 0 50%;
     }
 
     .footer-cta {

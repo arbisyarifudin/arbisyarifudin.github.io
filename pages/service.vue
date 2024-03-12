@@ -89,12 +89,21 @@
                     that you want to get started, think you need my help with something or just fancy saying hey, then
                     get in touch.</div>
                 <div class="service-cta__button">
-                    <a href="#" class="btn btn-primary"><i class="bi bi-envelope me-2"></i> Contact Me</a>
+                    <a href="#" class="btn btn-primary" @click.prevent="openContactDialog"><i class="bi bi-envelope me-2"></i> Contact Me</a>
                 </div>
             </section>
         </div>
     </div>
 </template>
+
+<script setup>
+
+const openContactDialog = () => {
+    const contactDialog = new bootstrap.Modal(document.getElementById('contactDialog'), { keyboard: false })
+    contactDialog.show()
+}
+
+</script>
 
 <style lang="scss" scoped>
 .service {

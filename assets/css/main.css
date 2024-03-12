@@ -43,11 +43,13 @@ body {
 }
 #header .navbar .nav-item.message {
   font-size: 21px;
-  animation: scaleAnimation 0.5s infinite alternate;
   transition: all 0.3s ease;
 }
 #header .navbar .nav-item.message .nav-link {
   color: #fff;
+}
+#header .navbar .nav-item.message:hover {
+  transform: scale(1.2);
 }
 #header .navbar .nav-item.message:hover .nav-link {
   color: #0f5fff;
