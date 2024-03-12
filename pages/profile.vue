@@ -32,7 +32,7 @@
                             <div class="profile-short">
                                 <h2 class="section-title">Hi, welcome!</h2>
                                 <p class="profile-desc">
-                                    As a full-stack web developer, I am passionate about combining programming and
+                                    As a full-stack developer, I am passionate about combining programming and
                                     design to create functional and visually appealing web solutions. With experience in
                                     both front-end and back-end development, I have worked with a diverse range of
                                     clients including private and government agencies in Indonesia both as a freelancer
@@ -45,12 +45,12 @@
                                     industry standards and exceeds client expectations. My goal is to deliver
                                     exceptional results and high levels of customer satisfaction.
                                 </p>
-                                <p class="profile-desc">
-                                    Let's work together to create something amazing!
+                                <p class="profile-desc cta">
+                                    Let's talk about your project and how I can help you achieve your goals.
                                 </p>
 
                                 <div class="d-flex mt-4">
-                                    <a href="#" class="btn btn-outline-primary"><i class="bi bi-download me-2"></i>
+                                    <a download href="/documents/Resume - Arbi Syarifudin (EN).pdf" class="btn btn-outline-primary"><i class="bi bi-download me-2"></i>
                                         Download CV</a>
                                     <button href="#" class="btn btn-primary ms-3"><i class="bi bi-envelope me-2"></i>
                                         Hire Me</button>
@@ -97,8 +97,8 @@
                                         <li>CI/CD</li>
                                         <li>Git & Github / Gitlab</li>
                                         <li>Postman & Insomnia</li>
-                                        <li>VS Code & Sublime Text</li>
-                                        <li>Adobe XD & Figma</li>
+                                        <li>VS Code</li>
+                                        <li>Figma</li>
                                     </ul>
                                 </div>
                                 <div class="col-md-6">
@@ -120,21 +120,6 @@
 
                         <section class="profile-experience">
                             <h2 class="section-title">Experience</h2>
-                            <div class="experience-item">
-                                <h3 class="experience-title">Lead Developer of Satuin.id (Remote)</h3>
-                                <div class="d-flex justify-content-between">
-                                    <div>
-                                        <h4 class="experience-company">PT Satu Resolusi Optima (Onero Solutions)</h4>
-                                        <p class="experience-company-link"><a href="https://onero.id">
-                                                <i class="bi bi-link me-1"></i>onero.id</a>
-                                        </p>
-                                    </div>
-                                    <p class="experience-date">November 2023 - Present</p>
-                                </div>
-                                <p class="experience-desc">
-                                    I am responsible as a lead developer in the development of the Satuin.id platform.
-                                </p>
-                            </div>
                             <div class="experience-item">
                                 <h3 class="experience-title">Full-stack Developer (Remote)</h3>
                                 <div class="d-flex justify-content-between">
@@ -232,6 +217,19 @@
         font-size: 0.95rem;
         line-height: 1.9;
         color: #cccaca;
+    }
+
+    &-desc {
+        margin-bottom: 1.1rem;
+        font-size: 0.95rem;
+        line-height: 1.9;
+        color: #cccaca;
+
+        &.cta {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fff;
+        }
     }
 
     &-contact {
