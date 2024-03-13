@@ -76,7 +76,7 @@ const projects = ref([
         subtitle: 'All-in-one CRM system',
         year: '2022 - 2024',
         categories: ['Custom Development', 'Web Apps', 'CRM'],
-        image: 'https://satuin.id/wp-content/uploads/2023/05/Content.png',
+        image: '/projects/satuin.id.webp',
         slug: null,
         siteLink: 'https://satuin.id'
     },
@@ -85,7 +85,7 @@ const projects = ref([
         title: 'Satuin.id - Mobile App',
         year: '2022 - 2023',
         categories: ['Mobile Development', 'CRM', 'Chat System'],
-        image: 'https://satuin.id/wp-content/uploads/2023/05/Content-1.png',
+        image: '/projects/satuin.id-mobile.webp',
         slug: null
     },
     {
@@ -94,7 +94,7 @@ const projects = ref([
         subtitle: 'Jogja Belajar Radio',
         year: 2023,
         categories: ['Web Development', 'Website', 'Media', 'Education'],
-        image: 'https://awesomescreenshot.s3.amazonaws.com/image/1973383/46724199-b251b127c7e24469a4a8040194c8e60a.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20240313%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240313T060733Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&X-Amz-Signature=c2b33174d606e93b8ebf9175f3bc84977f05f022a9c039541f2e1b0d2ffb8743',
+        image: '/projects/jbradio.jpg',
         slug: null,
         siteLink: 'https://jbradio.jogjabelajar.org'
     },
@@ -104,7 +104,7 @@ const projects = ref([
         subtitle: 'Jogja Belajar TV',
         year: 2022,
         categories: ['Web Development', 'Website', 'Media', 'Education'],
-        image: 'https://awesomescreenshot.s3.amazonaws.com/image/1973383/46726000-9df2d46c50e755401290d0a12a80ebbc.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20240313%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240313T072241Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&X-Amz-Signature=5272dc2f5fbc834396960d20729ee4fa26f237bee529a3dfad31d88de593d654',
+        image: '/projects/jbtv.jpg',
         slug: null,
         siteLink: 'https://jbtv.jogjabelajar.org'
     },
@@ -114,7 +114,7 @@ const projects = ref([
         subtitle: 'Private Mentor & Tryout System', 
         year: '2021 - 2022',
         categories: ['Custom Development', 'Company Profile', 'Web Apps', 'LMS'],
-        image: 'https://wesclic.com/wp-content/uploads/2022/04/bantuan.png',
+        image: '/projects/ujiaja.png',
         slug: null,
         siteLink: 'https://jbtv.jogjabelajar.org'
     },
