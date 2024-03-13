@@ -14,7 +14,7 @@
                             <a href="#" class="btn btn-primary btn-sm me-3 instagram"><i
                                     class="bi bi-instagram"></i></a>
                             <a href="#" class="btn btn-primary btn-sm me-3 youtube"><i class="bi bi-youtube"></i></a>
-                            <a href="#" class="btn btn-primary btn-sm me-3 linkedin"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" class="btn btn-primary btn-sm me-3 linkedin"><i class="bi bi-link-45degedin"></i></a>
                             <a href="#" class="btn btn-primary btn-sm me-3 github"><i class="bi bi-github"></i></a>
                         </div>
                         <!-- <ul class="profile-contact list-unstyled mt-3">
@@ -127,7 +127,7 @@
                                         <h4 class="experience-company">PT Satu Resolusi Optima (Onero Solutions)</h4>
                                         <p class="experience-company-link">
                                             <a href="https://onero.id">
-                                                <i class="bi bi-link me-1"></i>onero.id</a>
+                                                <i class="bi bi-link-45deg me-1"></i>onero.id</a>
                                         </p>
                                     </div>
                                     <p class="experience-date">Sept 2021 - Present</p>
