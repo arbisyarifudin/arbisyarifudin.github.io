@@ -8,7 +8,7 @@
                         <p id="ticker" class="description" style="opacity: 0"><span>A professional web developer based
                                 in Indonesia.</span>
                             <br><small>Specializing
-                                in building (and occasionally designing) exceptional, high-quality websites and
+                                in building exceptional, high-quality websites and
                                 applications.</small>
                         </p>
                     </div>
@@ -34,11 +34,13 @@
                 <div class="col-lg-5 col-12">
                     <div class="contact">
                         <ul class="contact-row list-unstyled">
-                            <li class="youtube"><a href="https://youtube.com/@pekerjarimot" target="_blank"><i class="bi bi-youtube"></i></a></li>
-                            <li class="instagram"><a href="https://instagram.com/pekerjarimot" target="_blank"><i class="bi bi-instagram"></i></a></li>
-                            <li class="cta"><a href="#" @click.prevent="openContactDialog"><span class="text">Work with Me</span> <svg
-                                        xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                                        class="bi bi-arrow-right msx-md-2" viewBox="0 0 16 16">
+                            <li class="youtube"><a href="https://youtube.com/@pekerjarimot" target="_blank"><i
+                                        class="bi bi-youtube"></i></a></li>
+                            <li class="instagram"><a href="https://instagram.com/pekerjarimot" target="_blank"><i
+                                        class="bi bi-instagram"></i></a></li>
+                            <li class="cta"><a href="#" @click.prevent="openContactDialog"><span class="text">Work with
+                                        Me</span> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                        fill="currentColor" class="bi bi-arrow-right msx-md-2" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd"
                                             d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
                                     </svg></a></li>
@@ -92,7 +94,7 @@ onMounted(() => {
     ticker.innerHTML = '<span></span><br><small></small>'
 
     const text = 'A professional web developer based in Indonesia.'
-    const small = 'Specializing in building (and occasionally designing) exceptional, high-quality websites and applications.'
+    const small = 'Specializing in building exceptional, high-quality websites and applications.'
 
     let speed = 50
     let isTyping = ref(false)

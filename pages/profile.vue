@@ -14,7 +14,8 @@
                             <a href="#" class="btn btn-primary btn-sm me-3 instagram"><i
                                     class="bi bi-instagram"></i></a>
                             <a href="#" class="btn btn-primary btn-sm me-3 youtube"><i class="bi bi-youtube"></i></a>
-                            <a href="#" class="btn btn-primary btn-sm me-3 linkedin"><i class="bi bi-link-45degedin"></i></a>
+                            <a href="#" class="btn btn-primary btn-sm me-3 linkedin"><i
+                                    class="bi bi-link-45degedin"></i></a>
                             <a href="#" class="btn btn-primary btn-sm me-3 github"><i class="bi bi-github"></i></a>
                         </div>
                         <!-- <ul class="profile-contact list-unstyled mt-3">
@@ -50,9 +51,11 @@
                                 </p>
 
                                 <div class="d-flex mt-4">
-                                    <a download href="/documents/Resume - Arbi Syarifudin (EN).pdf" class="btn btn-outline-primary"><i class="bi bi-download me-2"></i>
+                                    <a download href="/documents/Resume - Arbi Syarifudin (EN).pdf"
+                                        class="btn btn-outline-primary"><i class="bi bi-download me-2"></i>
                                         Download CV</a>
-                                    <button @click="openContactDialog" class="btn btn-primary ms-3"><i class="bi bi-envelope me-2"></i>
+                                    <button @click="openContactDialog" class="btn btn-primary ms-3"><i
+                                            class="bi bi-envelope me-2"></i>
                                         Hire Me</button>
                                 </div>
 
@@ -168,6 +171,10 @@
 useHead({
     title: 'Profile',
     meta: [
+        {
+            name: 'title',
+            content: 'Profile'
+        },
         {
             name: 'description',
             content: 'Arbi Syarifudin is a Full Stack Developer, loves to code and design. He is passionate about combining programming and design to create functional and visually appealing web solutions.'

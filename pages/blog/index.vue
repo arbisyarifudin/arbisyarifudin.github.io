@@ -53,6 +53,10 @@ useHead({
         {
             name: 'description',
             content: 'Here are some of the blog posts that Arbi Syarifudin has written.'
+        },
+        {
+            name: 'title',
+            content: 'Blogs'
         }
     ]
 })

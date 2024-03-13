@@ -70,7 +70,8 @@ useHead({
     meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: '' },
+        { name: 'title', content: 'Arbi Syarifudin' },
+        { name: 'description', content: 'A professional web developer based in Indonesia. Specializing in building exceptional, high-quality websites and applications.' },
         { name: 'author', content: 'Arbi Syarifudin' },
         { name: 'theme-color', content: '#000000' },
     ],

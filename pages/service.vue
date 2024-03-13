@@ -89,7 +89,8 @@
                     that you want to get started, think you need my help with something or just fancy saying hey, then
                     get in touch.</div>
                 <div class="service-cta__button">
-                    <a href="#" class="btn btn-primary" @click.prevent="openContactDialog"><i class="bi bi-envelope me-2"></i> Contact Me</a>
+                    <a href="#" class="btn btn-primary" @click.prevent="openContactDialog"><i
+                            class="bi bi-envelope me-2"></i> Contact Me</a>
                 </div>
             </section>
         </div>
@@ -101,6 +102,10 @@
 useHead({
     title: 'Services',
     meta: [
+        {
+            name: 'title',
+            content: 'Services'
+        },
         {
             name: 'description',
             content: 'Here are the services that Arbi Syarifudin can provide.'

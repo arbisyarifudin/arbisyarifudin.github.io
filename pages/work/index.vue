@@ -61,6 +61,10 @@ useHead({
         {
             name: 'description',
             content: 'Here are some of the projects that Arbi Syarifudin has worked on.'
+        },
+        {
+            name: 'title',
+            content: 'Works'
         }
     ]
 })
