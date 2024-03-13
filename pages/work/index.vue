@@ -17,6 +17,7 @@
                                     <h3 class="work-item__title">{{ project.title }} <a v-if="project.siteLink" :href="project.siteLink" target="_blank" title="View Site"><i class="bi bi-link-45deg ms-1"></i></a></h3>
                                     <div class="work-item__year">{{ project.year }}</div>
                                 </div>
+                                <div v-if="project.subtitle" class="mb-2" style="margin-top: -10px">{{ project.subtitle }}</div>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="work-item__category">{{ project.categories.map(v => v).join(', ') }}</div>
                                     <div class="work-item__more" v-if="project.slug">
@@ -67,36 +68,49 @@ useHead({
 const projects = ref([
     {
         id: 1,
-        title: 'Satuin CRM',
-        year: 2023,
-        categories: ['Custom Development', 'Website'],
+        title: 'Satuin.id',
+        subtitle: 'All-in-one CRM system',
+        year: '2022 - 2024',
+        categories: ['Custom Development', 'Web Apps', 'CRM'],
         image: 'https://satuin.id/wp-content/uploads/2023/05/Content.png',
         slug: null,
         siteLink: 'https://satuin.id'
     },
     {
-        id: 1,
-        title: 'Satuin Mobile App',
-        year: 2023,
-        categories: ['Mobile Development'],
+        id: 2,
+        title: 'Satuin.id - Mobile App',
+        year: '2022 - 2023',
+        categories: ['Mobile Development', 'CRM', 'Chat System'],
         image: 'https://satuin.id/wp-content/uploads/2023/05/Content-1.png',
         slug: null
     },
     {
         id: 2,
         title: 'JB Radio',
+        subtitle: 'Jogja Belajar Radio',
         year: 2023,
-        categories: ['Web Development'],
+        categories: ['Web Development', 'Website', 'Media', 'Education'],
         image: 'https://awesomescreenshot.s3.amazonaws.com/image/1973383/46724199-b251b127c7e24469a4a8040194c8e60a.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20240313%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240313T060733Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&X-Amz-Signature=c2b33174d606e93b8ebf9175f3bc84977f05f022a9c039541f2e1b0d2ffb8743',
         slug: null,
         siteLink: 'https://jbradio.jogjabelajar.org'
     },
     {
-        id: 3,
+        id: 4,
         title: 'JB TV',
+        subtitle: 'Jogja Belajar TV',
         year: 2022,
-        categories: ['Web Development'],
+        categories: ['Web Development', 'Website', 'Media', 'Education'],
         image: 'https://awesomescreenshot.s3.amazonaws.com/image/1973383/46726000-9df2d46c50e755401290d0a12a80ebbc.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20240313%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240313T072241Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&X-Amz-Signature=5272dc2f5fbc834396960d20729ee4fa26f237bee529a3dfad31d88de593d654',
+        slug: null,
+        siteLink: 'https://jbtv.jogjabelajar.org'
+    },
+    {
+        id: 5,
+        title: 'Ujiaja',
+        subtitle: 'Private Mentor & Tryout System', 
+        year: '2021 - 2022',
+        categories: ['Custom Development', 'Company Profile', 'Web Apps', 'LMS'],
+        image: 'https://wesclic.com/wp-content/uploads/2022/04/bantuan.png',
         slug: null,
         siteLink: 'https://jbtv.jogjabelajar.org'
     },
@@ -126,6 +140,7 @@ const projects = ref([
             .work-item__body {
                 padding: 20px;
                 border-radius: 5px;
+                min-height: 120px;
 
                 .work-item__title {
                     margin-bottom: 10px;
