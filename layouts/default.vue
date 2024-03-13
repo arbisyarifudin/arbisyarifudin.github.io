@@ -63,9 +63,9 @@ import ContactDialog from '~/components/ContactDialog.vue';
 // import { onClickOutside } from 'vue3-click-away'
 
 useHead({
-    title: 'Arbi Syarifudin',
+    // title: 'Arbi Syarifudin',
     titleTemplate (title) {
-        return title ? `${title} - Arsyaf.dev` : 'Arsyaf.dev'
+        return title ? `${title} - Arbi Syarifudin` : 'Arbi Syarifudin'
     },
     meta: [
         { charset: 'utf-8' },
