@@ -27,6 +27,8 @@
                     <div class="latests">
                         <!-- <h2 class="title">My Latest Blog</h2>
                         <p class="post-title"><a href="#">How to create a beautiful website with Tailwind CSS</a></p> -->
+                        <h2 class="title">Check My Latest Work:</h2>
+                        <p class="post-title"><router-link to="/work">CRM & Omni-channel Web Apps</router-link></p>
                     </div>
                 </div>
                 <div class="col-lg-5 col-12">
