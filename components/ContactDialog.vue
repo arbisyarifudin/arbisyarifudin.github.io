@@ -177,7 +177,7 @@ const submitMessage = async () => {
 
         if (docRef.id) {
 
-            hitSApi(docRef.id, form.value)
+            // hitSApi(docRef.id, form.value)
 
             form.value.name = ''
             form.value.email = ''

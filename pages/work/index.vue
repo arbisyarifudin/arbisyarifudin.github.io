@@ -18,12 +18,15 @@
                                     <div class="work-item__year">{{ project.year }}</div>
                                 </div>
                                 <div v-if="project.subtitle" class="mb-2" style="margin-top: -10px">{{ project.subtitle }}</div>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="work-item__category">{{ project.categories.map(v => v).join(', ') }}</div>
+                                <div class="d-flex justify-content-between align-items-center" v-if="project.categories?.length">
+                                    <div class="work-item__category"><span>Category:</span> {{ project.categories.map(v => v).join(', ') }}</div>
                                     <div class="work-item__more" v-if="project.slug">
                                         <router-link :to="`/work/${project.slug}`"><i class="bi bi-arrow-right"></i> View
                                             Project</router-link>
                                     </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mt-2" v-if="project.roles?.length">
+                                    <div class="work-item__category"><span>Role:</span> {{ project.roles.map(v => v).join(', ') }}</div>
                                 </div>
                             </div>
                         </div>
@@ -76,17 +79,21 @@ const projects = ref([
         subtitle: 'All-in-one CRM system',
         year: '2022 - 2024',
         categories: ['Custom Development', 'Web Apps', 'CRM'],
+        roles: ['Fullstack Developer'],
         image: '/projects/satuin.id.webp',
         slug: null,
         siteLink: 'https://satuin.id'
     },
     {
         id: 2,
-        title: 'Satuin.id - Mobile App',
+        title: 'Satuin Connect',
+        subtitle: 'Satuin.id in Mobile App',
         year: '2022 - 2023',
         categories: ['Mobile Development', 'CRM', 'Chat System'],
+        roles: ['Fullstack Developer'],
         image: '/projects/satuin.id-mobile.webp',
-        slug: null
+        slug: null,
+        siteLink: 'https://play.google.com/store/apps/details?id=com.onero.satuin&pcampaignid=web_share'
     },
     {
         id: 2,
@@ -94,6 +101,7 @@ const projects = ref([
         subtitle: 'Jogja Belajar Radio',
         year: 2023,
         categories: ['Web Development', 'Website', 'Media', 'Education'],
+        roles: ['Frontend Developer'],
         image: '/projects/jbradio.jpg',
         slug: null,
         siteLink: 'https://jbradio.jogjabelajar.org'
@@ -104,6 +112,7 @@ const projects = ref([
         subtitle: 'Jogja Belajar TV',
         year: 2022,
         categories: ['Web Development', 'Website', 'Media', 'Education'],
+        roles: ['Frontend Developer'],
         image: '/projects/jbtv.jpg',
         slug: null,
         siteLink: 'https://jbtv.jogjabelajar.org'
@@ -114,6 +123,7 @@ const projects = ref([
         subtitle: 'Private Mentor & Tryout System', 
         year: '2021 - 2022',
         categories: ['Custom Development', 'Company Profile', 'Web Apps', 'LMS'],
+        roles: ['Fullstack Developer'],
         image: '/projects/ujiaja.png',
         slug: null,
         siteLink: 'https://jbtv.jogjabelajar.org'
@@ -169,6 +179,12 @@ const projects = ref([
                 .work-item__category {
                     font-size: 12px;
                     color: #aaa;
+
+                    span {
+                        font-weight: 500;
+                        margin-right: 5px;
+                        color: #fff;
+                    }
                 }
 
                 .work-item__more {
