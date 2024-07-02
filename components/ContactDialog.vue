@@ -177,7 +177,7 @@ const submitMessage = async () => {
 
         if (docRef.id) {
 
-            // hitSApi(docRef.id, form.value)
+            hitSApi(docRef.id, form.value)
 
             form.value.name = ''
             form.value.email = ''
@@ -214,7 +214,7 @@ const submitMessage = async () => {
 
 const hitSApi = async (docRefId, formData) => {
     const data = JSON.parse(JSON.stringify(formData))
-    return await fetch('/s/outbound/deal/create', {
+    return await fetch(sApiUrl + '/outbound/deal/create', {
         method: 'POST',
         body: JSON.stringify({
             dealName: 'New Deal from FS#' + docRefId,
