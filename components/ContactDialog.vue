@@ -213,9 +213,15 @@ const submitMessage = async () => {
 }
 
 const hitSApi = async (docRefId, formData) => {
+    const config = useRuntimeConfig()
+    const apiUrl = config.sApiUrl
+    const apiKey = config.sApiKey
     const data = JSON.parse(JSON.stringify(formData))
-    return await fetch(sApiUrl + '/outbound/deal/create', {
+    return await fetch(apiUrl + '/outbound/deal/create', {
         method: 'POST',
+        headers: {
+            'Authorization': 'Bearer ' + apiKey,
+        },
         body: JSON.stringify({
             dealName: 'New Deal from FS#' + docRefId,
             dealAmount: data.budget ? parseFloat(data.budget) : 0,
