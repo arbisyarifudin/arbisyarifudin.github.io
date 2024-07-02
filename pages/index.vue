@@ -5,8 +5,7 @@
                 <div class="col-lg-7 col-md-8 col-sm-9 col-7">
                     <div class="introduction">
                         <h1 class="title">I am Arbi Syarifudin.</h1>
-                        <p id="ticker" class="description" style="opacity: 0"><span>A professional web developer based
-                                in Indonesia.</span>
+                        <p id="ticker" class="description" style="opacity: 0"><span>A professional web apps developer with over 5 years of experience.</span>
                             <br><small>Specializing
                                 in building exceptional, high-quality websites and
                                 applications.</small>
@@ -93,7 +92,7 @@ onMounted(() => {
     ticker.style.opacity = 1
     ticker.innerHTML = '<span></span><br><small></small>'
 
-    const text = 'A professional web developer based in Indonesia.'
+    const text = 'A professional web apps developer with over 5 years of experience.'
     const small = 'Specializing in building exceptional, high-quality websites and applications.'
 
     let speed = 50
