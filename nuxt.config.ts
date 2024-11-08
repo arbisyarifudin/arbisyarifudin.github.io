@@ -34,23 +34,12 @@ export default defineNuxtConfig({
   // }
 
   runtimeConfig: {
-    sApiUrl: process.env.S_API_URL,
-    sApiKey: process.env.S_API_KEY,
+    satuinApiUrl: process.env.SATUIN_CRM_API_URL,
+    satuinApiKey: process.env.SATUIN_CRM_API_KEY,
   },
 
-  nitro: {
-    firebase: {
-      gen: 2,
-      httpsOptions: {
-        region: 'asia-southeast2',
-        maxInstances: 1,
-      },
-      nodeVersion: '18',
-    },
-  },
+  nitro: {},
 
-  plugins: [
-    '~/plugins/firebase',
-  ],
+  plugins: [],
   
 })

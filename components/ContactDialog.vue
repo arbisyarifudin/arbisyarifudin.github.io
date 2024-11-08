@@ -96,9 +96,7 @@ import 'vue-toast-notification/dist/theme-bootstrap.css';
 
 import { ref, computed } from 'vue'
 import { useNuxtApp } from '#app';
-import { getFirestore, collection, addDoc } from "firebase/firestore";
 
-const { $firebaseApp } = useNuxtApp();
 const $toast = useToast();
 
 const form = ref({
@@ -142,7 +140,6 @@ const messageText = computed(() => {
 })
 
 const loading = ref(false)
-const db = getFirestore($firebaseApp)
 
 const submitMessage = async () => {
     console.log('submit message')
@@ -164,41 +161,31 @@ const submitMessage = async () => {
     loading.value = true
     try {
 
-        // Add a new document to the "submissions" collection
-        const docRef = await addDoc(collection(db, "submissions"), {
-            name: form.value.name,
-            email: form.value.email,
-            message: form.value.message,
-            service: form.value.service || 'Other',
-            budget: form.value.budget ? parseFloat(form.value.budget) : 0,
-            createdAt: new Date()
-        });
-        // console.log("Document written with ID: ", docRef.id);
+        // save to database
+        // WIP
 
-        if (docRef.id) {
+        // send webhook to sApi
+        saveToSatuinDeal(id, form.value)
 
-            hitSApi(docRef.id, form.value)
+        form.value.name = ''
+        form.value.email = ''
+        form.value.message = ''
+        form.value.service = ''
+        form.value.budget = ''
 
-            form.value.name = ''
-            form.value.email = ''
-            form.value.message = ''
-            form.value.service = ''
-            form.value.budget = ''
+        // hide modal
+        const btnClose = document.querySelector('#contactDialog .btn-close')
+        btnClose.click()
 
-            // hide modal
-            const btnClose = document.querySelector('#contactDialog .btn-close')
-            btnClose.click()
-
-            $toast.open({
-                message: 'Your message has been sent.',
-                type: 'success',
-                duration: 3000,
-                position: 'top-right',
-            })
-        }
+        $toast.open({
+            message: 'Your message has been sent.',
+            type: 'success',
+            duration: 3000,
+            position: 'top-right',
+        })
 
     } catch (err) {
-        console.error("Error adding document: ", err);
+        console.error("Error saving data: ", err);
 
         $toast.open({
             message: 'Failed to send your message. Please try again later.',
@@ -212,10 +199,13 @@ const submitMessage = async () => {
     }
 }
 
-const hitSApi = async (docRefId, formData) => {
+const saveToSatuinDeal = async (id, formData) => {
     const config = useRuntimeConfig()
-    const apiUrl = config.sApiUrl
-    const apiKey = config.sApiKey
+    const apiUrl = config.satuinApiUrl
+    const apiKey = config.satuinApiKey
+    
+    console.log('config', config)
+
     const data = JSON.parse(JSON.stringify(formData))
     return await fetch(apiUrl + '/outbound/deal/create', {
         method: 'POST',
@@ -223,14 +213,14 @@ const hitSApi = async (docRefId, formData) => {
             'Authorization': 'Bearer ' + apiKey,
         },
         body: JSON.stringify({
-            dealName: 'New Deal from FS#' + docRefId,
+            dealName: 'New Deal from FS#' + id,
             dealAmount: data.budget ? parseFloat(data.budget) : 0,
             dealNotes: data.message,
             pipelineID: 'CPP65f046040595d',
             // pipelineID: 'CPP655b6c6ee14d9',
             stageID: 'CST65f046130abef',
             // stageID: 'CST655b6c7d3a42e',
-            contactNumber: 'FS#' + docRefId,
+            contactNumber: 'FS#' + id,
             contactName: data.name,
             contactEmail: data.email,
             dealProducts: [

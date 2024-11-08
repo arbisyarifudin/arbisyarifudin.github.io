@@ -73,12 +73,12 @@ jobs:
 
       - name: Static HTML export with Nuxt
         run: |
-          echo "S_API_URL=${{ secrets.S_API_URL }}" >> $GITHUB_ENV
-          echo "S_API_KEY=${{ secrets.S_API_KEY }}" >> $GITHUB_ENV
+          echo "SATUIN_CRM_API_URL=${{ secrets.SATUIN_CRM_API_URL }}" >> $GITHUB_ENV
+          echo "SATUIN_CRM_API_KEY=${{ secrets.SATUIN_CRM_API_KEY }}" >> $GITHUB_ENV
           ${{ steps.detect-package-manager.outputs.manager }} run generate
         env:
-          S_API_URL: ${{ secrets.S_API_URL }}
-          S_API_KEY: ${{ secrets.S_API_KEY }}
+          SATUIN_CRM_API_URL: ${{ secrets.SATUIN_CRM_API_URL }}
+          SATUIN_CRM_API_KEY: ${{ secrets.SATUIN_CRM_API_KEY }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
