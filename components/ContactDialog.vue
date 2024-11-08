@@ -5,7 +5,7 @@
                 <div class="modal-header">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form @submit.prevent="submitMessage">
+                <!-- <form @submit.prevent="submitMessage">
                     <div class="modal-body">
                         <h1 class="modal-title" id="contactDialogLabel">Contact me</h1>
                         <p>Send me a message and explain your project. I'll get back to you as soon as possible.</p>
@@ -71,7 +71,16 @@
                             Send Message
                         </button>
                     </div>
-                </form>
+                </form> -->
+
+                <div class="modal-body px-0">
+                    <div class="px-3">
+                        <h1 class="modal-title" id="contactDialogLabel">Contact me</h1>
+                    </div>
+                    <iframe class="satuin-embed satuin-embed-dynamic-height"
+                        src="https://form.satuin.id/embed/6P4NwXwno2o77X4x" frameborder="0" onmousewheel="" width="100%"
+                        height="1000" style="background: transparent; margin-top: -5px;"></iframe>
+                </div>
 
                 <div class="modal-more-contact px-4">
                     <p>Or you can contact me via:</p>
@@ -203,7 +212,7 @@ const saveToSatuinDeal = async (id, formData) => {
     const config = useRuntimeConfig()
     const apiUrl = config.satuinApiUrl
     const apiKey = config.satuinApiKey
-    
+
     console.log('config', config)
 
     const data = JSON.parse(JSON.stringify(formData))
