@@ -4,7 +4,7 @@
         <header id="header" class="header">
             <nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top">
                 <div class="container">
-                    <router-link class="navbar-brand" to="/">Arsyaf.</router-link>
+                    <router-link class="navbar-brand" to="/" v-if="$route.path !== '/'">Arbi Syarifudin</router-link>
                     <div class="d-flex align-items-center d-md-none">
                         <button class="btn menu-cta-btn d-md-none me-3" @click="openContactDialog"><i class="bi bi-envelope"></i></button>
                         <button class="navbar-toggler d-flex align-items-center" type="button" @click="menuOpened ? hideMenu() : showMenu()"
@@ -81,15 +81,21 @@ useHead({
     },
     link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+
+        // fonts
         {
             rel: 'stylesheet',
             // Montserrat, 400, 500, 600, 700
             href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap'
         },
+
+        // bootstrap 5
         {
             rel: 'stylesheet',
             href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css'
         },
+
+        // bootstrap icons
         {
             rel: 'stylesheet',
             href: 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'
