@@ -5,7 +5,8 @@
                 <div class="col-lg-7 col-md-8 col-sm-9 col-7">
                     <div class="introduction">
                         <h1 class="title">I am Arbi Syarifudin.</h1>
-                        <p id="ticker" class="description" style="opacity: 0"><span>A professional web apps developer with over 5 years of experience.</span>
+                        <p id="ticker" class="description" style="opacity: 0"><span>A professional web apps developer
+                                with over 5 years of experience.</span>
                             <br><small>Specializing
                                 in building exceptional, high-quality websites and
                                 applications.</small>
@@ -33,10 +34,21 @@
                 <div class="col-lg-5 col-12">
                     <div class="contact">
                         <ul class="contact-row list-unstyled">
-                            <li class="youtube"><a href="https://youtube.com/@pekerjarimot" target="_blank"><i
-                                        class="bi bi-youtube"></i></a></li>
-                            <li class="instagram"><a href="https://instagram.com/pekerjarimot" target="_blank"><i
-                                        class="bi bi-instagram"></i></a></li>
+                            <li class="contact-link youtube"><a title="Youtube" href="https://youtube.com/@pekerjarimot"
+                                    target="_blank"><i class="bi bi-youtube"></i></a></li>
+                            <li class="contact-link instagram"><a title="Instagram" href="https://instagram.com/pekerjarimot"
+                                    target="_blank"><i class="bi bi-instagram"></i></a></li>
+                            <li class="contact-link upwork"><a title="Upwork"
+                                    href="https://www.upwork.com/freelancers/~014f6363cf8beb7f4a" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-brand-upwork">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M3 7v5a3 3 0 0 0 6 0v-5h1l4 6c.824 1.319 1.945 2 3.5 2a3.5 3.5 0 0 0 0 -7c-2.027 0 -3.137 1 -3.5 3c-.242 1.33 -.908 4 -2 8" />
+                                    </svg>
+                                </a></li>
                             <li class="cta"><a href="#" @click.prevent="openContactDialog"><span class="text">Work with
                                         Me</span> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
                                         fill="currentColor" class="bi bi-arrow-right msx-md-2" viewBox="0 0 16 16">
@@ -261,8 +273,7 @@ $textSecondary: #cccaca;
                         }
                     }
 
-                    &.youtube,
-                    &.instagram {
+                    &.contact-link {
                         font-size: 25px;
 
                         a {
@@ -276,6 +287,18 @@ $textSecondary: #cccaca;
 
                     &.instagram {
                         background-color: #0f5fff;
+                    }
+                    
+                    &.upwork {
+                        background-color: #46bb17;
+                        a {
+                            padding: 10px 20px;
+                        }
+
+                        svg {
+                            width: 35px;
+                            height: 35px;
+                        }
                     }
 
                     &.cta {
