@@ -4,7 +4,7 @@
         <header id="header" class="header">
             <nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top">
                 <div class="container">
-                    <router-link class="navbar-brand" to="/" v-if="$route.path !== '/'">Arbi Syarifudin</router-link>
+                    <router-link class="navbar-brand" :class="$route.path === '/' ? 'd-md-none' : ''" to="/">Arbi Syarifudin</router-link>
                     <div class="d-flex align-items-center d-md-none">
                         <button class="btn menu-cta-btn d-md-none me-3" @click="openContactDialog"><i class="bi bi-envelope"></i></button>
                         <button class="navbar-toggler d-flex align-items-center" type="button" @click="menuOpened ? hideMenu() : showMenu()"

@@ -4,7 +4,8 @@
             <div class="row align-items-centerx">
                 <div class="col-lg-4 col-md-4 text-center">
                     <div class="profile-left">
-                        <img src="/images/photo.png" alt="Profile Picture" class="img-fluid profile-image">
+                        <!-- <img src="/images/photo.png" alt="Profile Picture" class="img-fluid profile-image"> -->
+                        <img src="/images/photo-2-bw.png" alt="Profile Picture" class="img-fluid profile-image">
                         <div class="profile-summary">
                             <h1 class="profile-name">Arbi Syarifudin</h1>
                             <h3 class="profile-role">a Full Stack Developer,<br>loves to code and design</h3>
@@ -224,6 +225,7 @@ const openContactDialog = () => {
         width: 200px;
         height: 200px;
         object-fit: cover;
+        object-position: top;
         max-width: 100%;
         max-height: 100%;
         margin-bottom: 20px;

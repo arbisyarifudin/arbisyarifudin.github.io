@@ -1,4 +1,4 @@
-$dark: #000;
+$dark: #282828;
 $light: #fff;
 
 $primary: #0f5fff;
@@ -41,7 +41,7 @@ body {
 
     .navbar {
         // border-bottom: 1px solid red;
-        background-color: #000;
+        background-color: $dark;
 
         .nav-item {
             font-size: 15px;

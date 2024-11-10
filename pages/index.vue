@@ -15,7 +15,8 @@
                 </div>
                 <div class="col-lg-5 col-md-4 col-sm-3 col-12">
                     <div class="homepage-photo">
-                        <img src="/images/photo.png" alt="Arsyaf" class="img-fluid d-none">
+                        <!-- <img src="/images/photo.png" alt="Arsyaf" class="img-fluid d-none"> -->
+                        <img src="/images/photo-2-bw.png" alt="Arsyaf" class="img-fluid d-none">
                     </div>
                 </div>
             </div>
@@ -36,8 +37,9 @@
                         <ul class="contact-row list-unstyled">
                             <li class="contact-link youtube"><a title="Youtube" href="https://youtube.com/@pekerjarimot"
                                     target="_blank"><i class="bi bi-youtube"></i></a></li>
-                            <li class="contact-link instagram"><a title="Instagram" href="https://instagram.com/pekerjarimot"
-                                    target="_blank"><i class="bi bi-instagram"></i></a></li>
+                            <li class="contact-link instagram"><a title="Instagram"
+                                    href="https://instagram.com/pekerjarimot" target="_blank"><i
+                                        class="bi bi-instagram"></i></a></li>
                             <li class="contact-link upwork"><a title="Upwork"
                                     href="https://www.upwork.com/freelancers/~014f6363cf8beb7f4a" target="_blank">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -146,7 +148,7 @@ const openContactDialog = () => {
 </script>
 
 <style scoped lang="scss">
-$dark: #000;
+$dark: #282828;
 $light: #fff;
 
 $primary: #0f5fff;
@@ -201,7 +203,8 @@ $textSecondary: #cccaca;
         right: 0;
         width: 50%;
         height: 100%;
-        background-image: url(/images/photo.png);
+        // background-image: url(/images/photo.png);
+        background-image: url(/images/photo-2-bw.png);
         // background-image: url(/images/photo-ai.jpg);
         background-position: bottom center;
         background-repeat: no-repeat;
@@ -288,9 +291,10 @@ $textSecondary: #cccaca;
                     &.instagram {
                         background-color: #0f5fff;
                     }
-                    
+
                     &.upwork {
                         background-color: #46bb17;
+
                         a {
                             padding: 10px 20px;
                         }
