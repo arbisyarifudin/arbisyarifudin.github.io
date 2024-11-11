@@ -11,13 +11,23 @@
                             <h3 class="profile-role">a Full Stack Developer,<br>loves to code and design</h3>
                         </div>
                         <div class="profile-socials mt-4">
-                            <a href="#" class="btn btn-primary btn-sm me-3 facebook"><i class="bi bi-facebook"></i></a>
-                            <a href="#" class="btn btn-primary btn-sm me-3 instagram"><i
+                            <a href="https://youtube.com/@pekerjarimot" class="btn btn-primary btn-sm me-3 youtube" target="_blank"><i class="bi bi-youtube"></i></a>
+                            <a href="https://www.upwork.com/freelancers/~014f6363cf8beb7f4a" class="btn btn-primary btn-sm me-3 upwork" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-brand-upwork">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M3 7v5a3 3 0 0 0 6 0v-5h1l4 6c.824 1.319 1.945 2 3.5 2a3.5 3.5 0 0 0 0 -7c-2.027 0 -3.137 1 -3.5 3c-.242 1.33 -.908 4 -2 8" />
+                                    </svg>
+                            </a>
+                            <!-- <a href="https://facebook.com/arbisyarifudin" class="btn btn-primary btn-sm me-3 facebook"><i class="bi bi-facebook"></i></a> -->
+                            <a href="https://instagram.com/pekerjarimot" class="btn btn-primary btn-sm me-3 instagram" target="_blank"><i
                                     class="bi bi-instagram"></i></a>
-                            <a href="#" class="btn btn-primary btn-sm me-3 youtube"><i class="bi bi-youtube"></i></a>
-                            <a href="#" class="btn btn-primary btn-sm me-3 linkedin"><i
-                                    class="bi bi-link-45degedin"></i></a>
-                            <a href="#" class="btn btn-primary btn-sm me-3 github"><i class="bi bi-github"></i></a>
+                            <a href="https://www.linkedin.com/in/arbi-syarifudin/" class="btn btn-primary btn-sm me-3 linkedin" target="_blank"><i
+                                    class="bi bi-linkedin"></i></a>
+                            <a href="https://github.com/arbisyarifudin/" class="btn btn-primary btn-sm me-3 github" target="_blank"><i class="bi bi-github"></i></a>
                         </div>
                         <!-- <ul class="profile-contact list-unstyled mt-3">
                             <li><strong>Email:</strong> <a
@@ -196,7 +206,7 @@ const openContactDialog = () => {
 
 <style lang="scss" scoped>
 .profile {
-    padding-top: 20px;
+    padding-top: 25px;
     padding-bottom: 20px;
 
     .scrollable-area {
@@ -221,7 +231,7 @@ const openContactDialog = () => {
 
     &-image {
         border-radius: 50%;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
         width: 200px;
         height: 200px;
         object-fit: cover;
@@ -275,6 +285,10 @@ const openContactDialog = () => {
     &-socials {
         a {
             font-size: 0.9rem;
+        }
+
+        .upwork {
+            padding: 3px;
         }
     }
 
