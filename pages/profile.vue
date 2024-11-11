@@ -62,7 +62,7 @@
                                 </p>
 
                                 <div class="d-flex mt-4">
-                                    <a download href="/documents/Resume - Arbi Syarifudin (EN).pdf"
+                                    <a download href="/documents/Resume - Arbi Syarifudin (EN) - 2024.pdf"
                                         class="btn btn-outline-primary"><i class="bi bi-download me-2"></i>
                                         Download CV</a>
                                     <button @click="openContactDialog" class="btn btn-primary ms-3"><i
