@@ -87,7 +87,7 @@
                                         <li>JQuery</li>
                                         <li>Vue Js & Nuxt Js</li>
                                         <li>Quasar Framework</li>
-                                        <li>React Js</li>
+                                        <li>React Js  & Next JS</li>
                                         <li>Bootstrap & Tailwind CSS</li>
                                     </ul>
                                 </div>
@@ -95,11 +95,10 @@
                                     <h3 class="skill-title">Back-end Development</h3>
                                     <ul class="list-unstyled">
                                         <li>PHP Laravel / Lumen</li>
-                                        <li>Node Js & Express Js</li>
+                                        <li>Node Js, Express Js & Nest JS</li>
                                         <li>PHP Codeigniter 4</li>
                                         <li>MySQL & PostgreSQL</li>
                                         <li>MongoDB</li>
-                                        <li>RESTful API</li>
                                     </ul>
                                 </div>
                                 <div class="col-md-6">
@@ -125,6 +124,8 @@
                                         <li>SEO & Google Analytics</li>
                                         <li>Web Security</li>
                                         <li>Performance Optimization</li>
+                                        <li>Design to Code conversion</li>
+                                        <li>Responsive UI</li>
                                     </ul>
                                 </div>
                             </div>
@@ -144,7 +145,7 @@
                                                 <i class="bi bi-link-45deg me-1"></i>onero.id</a>
                                         </p>
                                     </div>
-                                    <p class="experience-date">Sept 2021 - Present</p>
+                                    <p class="experience-date">Sept 2021 - Nov 2024</p>
                                 </div>
                                 <p class="experience-desc">
                                     I am responsible as a full-stack developer and Technical Lead in several products
