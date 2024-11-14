@@ -44,18 +44,10 @@
                             <div class="profile-short">
                                 <h2 class="section-title">Hi, welcome!</h2>
                                 <p class="profile-desc">
-                                    As a full-stack developer, I am passionate about combining programming and
-                                    design to create functional and visually appealing web solutions. With experience in
-                                    both front-end and back-end development, I have worked with a diverse range of
-                                    clients including private and government agencies in Indonesia both as a freelancer
-                                    and remote worker.
+                                    A seasoned developer with over 5 years of extensive experience in the computer software industry. I am passionate about combining programming and design to create functional and visually appealing web application solutions. With experience in both front-end and back-end development, I have worked with a diverse range of clients worldwide as a freelancer and remote worker, including private and government agencies in Indonesia.
                                 </p>
                                 <p class="profile-desc">
-                                    I specialize in custom web applications, having developed a variety of projects
-                                    including company profile websites, SaaS platforms, online stores, website
-                                    redesigns, and more. My focus is on writing clean, well-documented code that meets
-                                    industry standards and exceeds client expectations. My goal is to deliver
-                                    exceptional results and high levels of customer satisfaction.
+                                    I specialize in custom web applications, having developed various projects including company profile websites, SaaS platforms, e-commerce websites, website redesigns, custom bots & automation, and more. I write clean, well-documented, and high-quality code that meets industry standards. My goal is to deliver exceptional results and high levels of customer satisfaction.
                                 </p>
                                 <p class="profile-desc cta">
                                     Let's talk about your project and how I can help you achieve your goals.
