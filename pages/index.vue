@@ -4,12 +4,9 @@
             <div class="row align-items-center w-100">
                 <div class="col-lg-7 col-md-8 col-sm-9 col-7">
                     <div class="introduction">
-                        <h1 class="title">I am Arbi Syarifudin.</h1>
-                        <p id="ticker" class="description" style="opacity: 0"><span>A professional web apps developer
-                                with over 5 years of experience.</span>
-                            <br><small>Specializing
-                                in building exceptional, high-quality websites and
-                                applications.</small>
+                        <h1 class="title">I am Arbi Syarifudin</h1>
+                        <p id="ticker" class="description" style="opacity: 0"><span>I can transforming ideas into impactful web, mobile, SaaS, and AI Solutions.</span>
+                            <br><small>With over 5 years of hands-on experience, I deliver top-notch, custom solutions that drive functionality and elevate user experiences across platforms. Let’s turn your vision into reality!</small>
                         </p>
                     </div>
                 </div>
@@ -106,8 +103,8 @@ onMounted(() => {
     ticker.style.opacity = 1
     ticker.innerHTML = '<span></span><br><small></small>'
 
-    const text = 'A professional web apps developer with over 5 years of experience.'
-    const small = 'Specializing in building exceptional, high-quality websites and applications.'
+    const text = 'I can transforming ideas into impactful web, mobile, SaaS, and AI Solutions.'
+    const small = 'With over 5 years of hands-on experience, I deliver top-notch, custom solutions that drive functionality and elevate user experiences across platforms. Let’s turn your vision into reality!'
 
     let speed = 50
     let isTyping = ref(false)
@@ -132,7 +129,7 @@ onMounted(() => {
     // }, (text.length + small.length) * speed + 2000)
 
     typeWriter('span', text)
-    setTimeout(() => typeWriter('small', small), 2000)
+    setTimeout(() => typeWriter('small', small), 100)
 
 })
 
@@ -147,7 +144,7 @@ const openContactDialog = () => {
 
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 $dark: #282828;
 $light: #fff;
 
@@ -185,6 +182,10 @@ $textSecondary: #cccaca;
                 line-height: 1.5;
                 font-weight: 400;
                 color: $textSecondary;
+                
+                span {
+                    display: inline-block;
+                }
 
                 small {
                     font-size: 14px;
