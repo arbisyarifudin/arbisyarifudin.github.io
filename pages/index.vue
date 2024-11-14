@@ -5,7 +5,7 @@
                 <div class="col-lg-7 col-md-8 col-sm-9 col-7">
                     <div class="introduction">
                         <h1 class="title">I am Arbi Syarifudin</h1>
-                        <p id="ticker" class="description" style="opacity: 0"><span>I can transforming ideas into impactful web, mobile, SaaS, and AI Solutions.</span>
+                        <p id="ticker" class="description" style="opacity: 0"><span>I love transforming ideas into impactful web, mobile, SaaS, and AI solutions.</span>
                             <br><small>With over 5 years of hands-on experience, I deliver top-notch, custom solutions that drive functionality and elevate user experiences across platforms. Let’s turn your vision into reality!</small>
                         </p>
                     </div>
@@ -103,7 +103,7 @@ onMounted(() => {
     ticker.style.opacity = 1
     ticker.innerHTML = '<span></span><br><small></small>'
 
-    const text = 'I can transforming ideas into impactful web, mobile, SaaS, and AI Solutions.'
+    const text = 'I love transforming ideas into impactful web, mobile, SaaS, and AI solutions.'
     const small = 'With over 5 years of hands-on experience, I deliver top-notch, custom solutions that drive functionality and elevate user experiences across platforms. Let’s turn your vision into reality!'
 
     let speed = 50
